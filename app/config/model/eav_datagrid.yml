@@ -1,0 +1,30 @@
+sidus_eav_data_grid:
+    configurations:
+        # Configuration Example
+        page:
+            family: Page
+            parent: data
+            filter_config:
+                sortable:
+                    - id
+                    - title
+                    - slug
+                    - parentPage
+                    - createdAt
+                    - updatedAt
+                fields:
+                    title: ~
+                    slug: ~
+                    parentPage:
+                        type: autocomplete_data
+            columns:
+                id:
+                    label: "#"
+                title:
+                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                slug: ~
+                parentPage: ~
+                createdAt: ~
+                updatedAt: ~
+                actions:
+                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"

@@ -1,0 +1,8 @@
+sidus_publishing:
+    enabled: %publishing_enabled%
+    queue:
+        base_directory: %kernel.root_dir%/data/publishing
+        override_timeout: 60
+        lockfile: %kernel.root_dir%/data/publishing/.lock
+
+    publishers: {}

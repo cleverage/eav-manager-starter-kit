@@ -1,0 +1,22 @@
+sidus_admin:
+    fallback_template: CleverAgeEAVManagerAdminBundle:Base
+    configurations:
+        myadmin:
+            controller: CleverAgeEAVManagerAdminBundle:Data
+            entity: '%sidus_data_class%'
+            prefix: /myadmin
+            default_form_type: sidus_tabbed_data
+            actions:
+                index:
+                    path:     /
+                list:
+                    path:     /{familyCode}/list
+                create:
+                    path:     /{familyCode}/create
+                edit:
+                    path:     /{familyCode}/{id}/edit
+                delete:
+                    path:     /{familyCode}/{id}/delete
+            options:
+                families:
+                    - Page

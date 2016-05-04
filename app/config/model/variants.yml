@@ -1,0 +1,8 @@
+sidus_eav_variant:
+    routes:
+        ## Routes here don't matter because they are overrided
+        select: foo_admin.variant.select
+        create: foo_admin.variant.create
+        edit: foo_admin.variant.edit
+        delete: foo_admin.variant.delete
+    families: ~

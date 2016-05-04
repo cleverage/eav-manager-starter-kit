@@ -1,0 +1,11 @@
+sidus_eav_model:
+    families:
+        User:
+            attributeAsLabel: firstName
+            attributes:
+                - firstName
+                - lastName
+
+    attributes:
+        firstName: ~
+        lastName: ~

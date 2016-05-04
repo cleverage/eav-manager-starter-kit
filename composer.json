@@ -1,0 +1,107 @@
+{
+    "name": "client/project",
+    "license": "proprietary",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@git.clever-age.net:clever-age-practice-manager/eav-manager.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9",
+        "ext-intl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mongo": "*",
+        "ext-mysql": "*",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-apcu": "*",
+        "symfony/symfony": "2.8.*",
+        "doctrine/orm": "^2.4.8",
+        "doctrine/doctrine-bundle": "~1.4",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0",
+
+        "friendsofsymfony/user-bundle": "~1.3.6",
+        "friendsofsymfony/jsrouting-bundle": "~1.5",
+        "liip/imagine-bundle": "1.5.*",
+        "exercise/htmlpurifier-bundle": "~0.2",
+        "tinymce/tinymce": "4.3.*",
+
+        "cleverage/eav-manager": "dev-master",
+
+        "sidus/eav-model-bundle": "dev-master",
+        "sidus/eav-bootstrap-bundle": "dev-master",
+        "sidus/filter-bundle": "dev-master",
+        "sidus/eav-filter-bundle": "dev-master",
+        "sidus/datagrid-bundle": "dev-master",
+        "sidus/eav-datagrid-bundle": "dev-master",
+        "sidus/eav-variant-bundle": "dev-master",
+        "sidus/publishing-bundle": "dev-master",
+        "sidus/file-upload-bundle": "dev-master",
+        "sidus/admin-bundle": "dev-master"
+    },
+    "require-dev": {
+        "nuovo/spreadsheet-reader": "0.5.11",
+        "doctrine/doctrine-fixtures-bundle": "2.3.*",
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "~2.7"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "cp -r vendor/tinymce/tinymce vendor/stfalcon/tinymce-bundle/Stfalcon/Bundle/TinymceBundle/Resources/public/vendor",
+            "Sidus\\FileUploadBundle\\Composer\\ScriptHandler::symlinkJQueryFileUpload",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrapSass",
+            "php app/console assetic:dump"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "cp -r vendor/tinymce/tinymce vendor/stfalcon/tinymce-bundle/Stfalcon/Bundle/TinymceBundle/Resources/public/vendor",
+            "Sidus\\FileUploadBundle\\Composer\\ScriptHandler::symlinkJQueryFileUpload",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrapSass",
+            "php app/console assetic:dump"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin",
+        "platform": {
+            "php": "5.6.11"
+        },
+        "component-dir": "web/assets",
+        "component-baseurl": "/assets"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "symlink",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}

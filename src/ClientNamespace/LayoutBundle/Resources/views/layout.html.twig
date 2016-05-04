@@ -1,0 +1,74 @@
+{% extends '@CleverAgeEAVManagerLayout/layout.html.twig' %}
+
+{% block metas %}
+    <meta name="description" content="Client Project">
+    <meta name="author" content="Clever-Age">
+{% endblock %}
+
+{% block title %}Client/Project{{ title is defined ? ' - ' ~ title }}{% endblock %}
+
+{% block stylesheets %}
+    {% stylesheets  'bundles/pinanoselect2/css/select2.css'
+                    'bundles/pinanoselect2/css/select2-bootstrap.css'
+                    'bundles/samsonautocomplete/css/autocomplete.css'
+                    'bundles/mopabootstrap/components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'
+                    'bundles/clientnamespacelayout/css/layout.css'
+            filter='?uglifycss' filter='cssrewrite' %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block main_menu_home_link %}
+    <a class="navbar-brand" href="{{ path('eavmanager_layout.dashboard') }}">Client/Project</a>
+{% endblock %}
+
+{% block main_menu_application %}
+    <ul class="nav navbar-nav">
+        {% if is_granted('ROLE_DATA_MANAGER') %}
+            {# PUT YOUR ADMINS MENU HERE #}
+            {{ utilities.admin_menu_icon_link('sitemap', 'My Admin', 'myadmin', 'index') }}
+            {% if is_granted('ROLE_MEDIA_MANAGER') %}
+                {{ utilities.admin_menu_icon_link('image', 'Médias', 'media', 'index') }}
+            {% endif %}
+        {% endif %}
+        {% if is_granted('ROLE_USER_MANAGER') %}
+            {{ utilities.admin_menu_icon_link('users', 'Utilisateurs', 'user', 'list') }}
+        {% endif %}
+    </ul>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts
+            'assets/jquery/jquery.min.js'
+            'assets/jquery-ui/ui/minified/core.min.js'
+            'assets/jquery-ui/ui/minified/widget.min.js'
+            'assets/jquery-ui/ui/minified/mouse.min.js'
+            'assets/jquery-ui/ui/minified/sortable.min.js'
+            'assets/jquery-ui/ui/minified/progressbar.min.js'
+            '@FOSJsRoutingBundle/Resources/public/js/router.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap-sass/assets/javascripts/bootstrap.js'
+            '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
+            '@MopaBootstrapBundle/Resources/public/components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.js'
+            '@MopaBootstrapBundle/Resources/public/components/smalot-bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.fr.js'
+            '@SidusFileUploadBundle/Resources/public/vendor/jquery-file-upload/js/jquery.fileupload.js'
+            '@SidusFileUploadBundle/Resources/public/vendor/jquery-file-upload/js/jquery.fileupload-jquery-ui.js'
+            '@SidusFileUploadBundle/Resources/public/vendor/jquery-file-upload/js/jquery.iframe-transport.js'
+            '@SidusEAVBootstrapBundle/Resources/public/js/bootstrap.collection.js'
+            '@SidusEAVBootstrapBundle/Resources/public/js/sortable.collection.js'
+            '@SidusFileUploadBundle/Resources/public/js/jquery.fileupload.sidus.js'
+            '@PinanoSelect2Bundle/Resources/public/js/select2.min.js'
+            '@PinanoSelect2Bundle/Resources/public/js/select2_locale_fr.js'
+            '@SamsonAutocompleteBundle/Resources/public/js/autocomplete.js'
+            '@SidusEAVBootstrapBundle/Resources/public/js/autocomplete.combo.selector.js'
+            '@CleverAgeEAVManagerLayoutBundle/Resources/public/js/init.datepickers.js'
+            '@CleverAgeEAVManagerLayoutBundle/Resources/public/js/ajax.navigation.js'
+            '@CleverAgeEAVManagerLayoutBundle/Resources/public/js/init.document.js'
+            '@CleverAgeEAVManagerLayoutBundle/Resources/public/js/navigation.lock.js'
+            '@CleverAgeEAVManagerLayoutBundle/Resources/public/js/media.browser.js'
+            filter='?uglifyjs2'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+    {{ tinymce_init() }}
+{% endblock %}

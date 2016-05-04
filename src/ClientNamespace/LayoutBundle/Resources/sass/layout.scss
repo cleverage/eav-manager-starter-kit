@@ -1,0 +1,19 @@
+@import "compass";
+
+@import "siduseavbootstrap/sass/bootstrap";
+@import "siduseavbootstrap/sass/common";
+
+/*!
+ * EAVManager theming
+ */
+@import "cleverageeavmanagerlayout/sass/partials/theme";
+@import "cleverageeavmanagerlayout/sass/partials/targets";
+@import "cleverageeavmanagerlayout/sass/partials/forms";
+@import "cleverageeavmanagerlayout/sass/partials/datagrid";
+@import "cleverageeavmanagerlayout/sass/partials/compatibility";
+@import "cleverageeavmanagerlayout/sass/partials/media";
+
+/* Additional third-party theming */
+@import "sidusfileupload/sass/fileupload";
+
+// Import your own scss here

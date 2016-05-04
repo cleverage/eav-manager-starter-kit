@@ -1,0 +1,26 @@
+sidus_eav_model:
+    families:
+        Page:
+            parent: Base
+            attributeAsLabel: title
+            attributes:
+              - content
+              - parentPage
+              - illustration
+
+    attributes:
+        content:
+            group: content
+            type: html
+            form_options:
+                tinymce_theme: advanced
+        parentPage:
+            group: content
+            type: autocomplete_data
+            form_options:
+                family: Page
+        illustration:
+            group: content
+            type: media_browser
+            form_options:
+                family: Image

@@ -1,0 +1,24 @@
+eavmanager_layout:
+    resource: "@CleverAgeEAVManagerLayoutBundle/Resources/config/routing.yml"
+
+sidus_admin:
+    resource: .
+    type: sidus_admin
+
+eavmanager_admin:
+    resource: "@CleverAgeEAVManagerAdminBundle/Resources/config/routing.yml"
+
+eavmanager_user:
+    resource: "@CleverAgeEAVManagerUserBundle/Resources/config/routing.yml"
+
+eavmanager_asset:
+    resource: "@CleverAgeEAVManagerAssetBundle/Resources/config/routing.yml"
+
+sidus_file_upload:
+    resource: "@SidusFileUploadBundle/Resources/config/routing.yml"
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

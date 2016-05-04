@@ -1,0 +1,33 @@
+sidus_eav_model:
+    families:
+        Base:
+            instantiable: false
+            attributeAsLabel: title
+            attributes:
+              - title
+              - workflowStatus
+              - slug
+
+
+    attributes:
+        title:
+            group: content
+            required: true
+        workflowStatus:
+            group: meta
+            type: choice
+            default: draft
+            form_options:
+                choices:
+                    draft: Draft
+                    to_validate: To Validate
+                    rejected: Rejected
+                    validated: Validated
+                    published: Published
+        slug:
+            group: meta
+            unique: true
+            required: true
+            validation_rules:
+                - Regex:
+                    pattern: '/^[a-z0-9]+(?:[-\_][a-z0-9]+)*$/'
