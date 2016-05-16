@@ -112,7 +112,7 @@
             "source": {
                 "type": "git",
                 "url": "git@git.clever-age.net:clever-age-practice-manager/eav-manager.git",
-                "reference": "eb7d6bab7b2d46ee7c31d5b84c0de9b68008491d"
+                "reference": "2b3dc4cc678a46cf54cccfefb784a6869e8fb645"
             },
             "type": "library",
             "autoload": {
@@ -139,7 +139,7 @@
                 "manager",
                 "model"
             ],
-            "time": "2016-05-03 21:17:59"
+            "time": "2016-05-16 10:30:28"
         },
         {
             "name": "components/jquery",
@@ -1986,16 +1986,16 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "3be0322e0007b54dbffd5a96faf1c11f6f91cf46"
+                "reference": "b657b6601a24da525645fb5358ce77fdf57889f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/3be0322e0007b54dbffd5a96faf1c11f6f91cf46",
-                "reference": "3be0322e0007b54dbffd5a96faf1c11f6f91cf46",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/b657b6601a24da525645fb5358ce77fdf57889f1",
+                "reference": "b657b6601a24da525645fb5358ce77fdf57889f1",
                 "shasum": ""
             },
             "require": {
@@ -2056,7 +2056,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2016-02-16 19:35:14"
+            "time": "2016-05-06 06:27:38"
         },
         {
             "name": "monolog/monolog",
@@ -2999,12 +2999,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusAdminBundle.git",
-                "reference": "96b3dcac844bb03f5dc9643e747fcde9ea1a0407"
+                "reference": "9d8003e9d97cc4e7c7fc001436a7cbf164da176f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/96b3dcac844bb03f5dc9643e747fcde9ea1a0407",
-                "reference": "96b3dcac844bb03f5dc9643e747fcde9ea1a0407",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/9d8003e9d97cc4e7c7fc001436a7cbf164da176f",
+                "reference": "9d8003e9d97cc4e7c7fc001436a7cbf164da176f",
                 "shasum": ""
             },
             "require": {
@@ -3035,7 +3035,7 @@
                 "action",
                 "admin"
             ],
-            "time": "2016-04-29 08:53:13"
+            "time": "2016-05-06 13:56:43"
         },
         {
             "name": "sidus/datagrid-bundle",
@@ -3186,12 +3186,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVFilterBundle.git",
-                "reference": "580c266ba7d2ae0df55a4a4172582d7b5ca56407"
+                "reference": "3730340fb7dbeaab5c9531dc88809e1e9f1f492f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/580c266ba7d2ae0df55a4a4172582d7b5ca56407",
-                "reference": "580c266ba7d2ae0df55a4a4172582d7b5ca56407",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/3730340fb7dbeaab5c9531dc88809e1e9f1f492f",
+                "reference": "3730340fb7dbeaab5c9531dc88809e1e9f1f492f",
                 "shasum": ""
             },
             "require": {
@@ -3229,7 +3229,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2016-04-28 12:10:10"
+            "time": "2016-05-12 15:45:59"
         },
         {
             "name": "sidus/eav-model-bundle",
@@ -3238,12 +3238,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "e50d42db20767d29b7a94900e6100ad374e5f0d2"
+                "reference": "b22278c18586f7c77af82d0329ea15bf806b8793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/e50d42db20767d29b7a94900e6100ad374e5f0d2",
-                "reference": "e50d42db20767d29b7a94900e6100ad374e5f0d2",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/b22278c18586f7c77af82d0329ea15bf806b8793",
+                "reference": "b22278c18586f7c77af82d0329ea15bf806b8793",
                 "shasum": ""
             },
             "require": {
@@ -3280,7 +3280,7 @@
                 "eav",
                 "model"
             ],
-            "time": "2016-05-03 21:18:34"
+            "time": "2016-05-16 10:28:58"
         },
         {
             "name": "sidus/eav-variant-bundle",
@@ -4283,16 +4283,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.5",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "39ddd2383f4113cf67f8b28cde2c9d3fa340c3c2"
+                "reference": "8408816780215fae055599d100b5385d9a247151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/39ddd2383f4113cf67f8b28cde2c9d3fa340c3c2",
-                "reference": "39ddd2383f4113cf67f8b28cde2c9d3fa340c3c2",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/8408816780215fae055599d100b5385d9a247151",
+                "reference": "8408816780215fae055599d100b5385d9a247151",
                 "shasum": ""
             },
             "require": {
@@ -4413,20 +4413,20 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-04-29 15:34:08"
+            "time": "2016-05-09 21:45:54"
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.3.11",
+            "version": "4.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "969503f87d04a41ad0b84b1d215a98fba13ca5a9"
+                "reference": "dfa88d1f6868aa80081f35f3bb0b8257181b6fdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/969503f87d04a41ad0b84b1d215a98fba13ca5a9",
-                "reference": "969503f87d04a41ad0b84b1d215a98fba13ca5a9",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/dfa88d1f6868aa80081f35f3bb0b8257181b6fdf",
+                "reference": "dfa88d1f6868aa80081f35f3bb0b8257181b6fdf",
                 "shasum": ""
             },
             "type": "component",
@@ -4459,7 +4459,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2016-04-25 02:19:14"
+            "time": "2016-05-10 11:15:05"
         },
         {
             "name": "twbs/bootstrap-sass",
@@ -4885,7 +4885,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.5",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
