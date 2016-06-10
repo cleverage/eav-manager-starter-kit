@@ -9,7 +9,7 @@ sidus_eav_model:
     default_context: {}
 
 imports:
-    - { resource: @CleverAgeEAVManagerAdminBundle/Resources/config/base_config.yml }
+    - { resource: '@CleverAgeEAVManagerAdminBundle/Resources/config/base_config.yml' }
     - { resource: admin.yml }
     - { resource: eav_datagrid.yml }
     - { resource: publishing.yml }
@@ -17,6 +17,5 @@ imports:
     # Model configuration, order of files matters
     - { resource: project/base.yml }
     - { resource: project/page.yml }
-    - { resource: project/assets.yml }
     - { resource: project/user.yml }
     - { resource: variants.yml }

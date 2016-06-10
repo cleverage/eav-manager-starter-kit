@@ -18,5 +18,6 @@ sidus_admin:
                 delete:
                     path:     /{familyCode}/{id}/delete
             options:
+                datagrid: data
                 families:
-                    - Page
+                    Page: ~

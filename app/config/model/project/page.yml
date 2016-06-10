@@ -14,11 +14,13 @@ sidus_eav_model:
             type: html
             form_options:
                 tinymce_theme: advanced
+
         parentPage:
             group: content
             type: autocomplete_data
             form_options:
                 family: Page
+
         illustration:
             group: content
             type: media_browser

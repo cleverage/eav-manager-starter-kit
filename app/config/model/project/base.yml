@@ -13,6 +13,7 @@ sidus_eav_model:
         title:
             group: content
             required: true
+
         workflowStatus:
             group: meta
             type: choice
@@ -24,6 +25,7 @@ sidus_eav_model:
                     rejected: Rejected
                     validated: Validated
                     published: Published
+
         slug:
             group: meta
             unique: true

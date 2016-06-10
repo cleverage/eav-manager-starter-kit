@@ -7,7 +7,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 class ClientNamespaceEAVModelBundle extends Bundle
 {
     /**
-     * @inheritDoc
+     * @return string
      */
     public function getParent()
     {
