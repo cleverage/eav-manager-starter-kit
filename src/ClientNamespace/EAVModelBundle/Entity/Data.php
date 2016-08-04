@@ -8,7 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Data
  *
- * @ORM\Table(name="client_data")
+ * @ORM\Table(name="client_data", indexes={
+ *     @ORM\Index(name="family", columns={"family_code"})
+ * })
  * @ORM\Entity(repositoryClass="CleverAge\EAVManager\EAVModelBundle\Entity\DataRepository")
  */
 class Data extends BaseData
