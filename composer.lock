@@ -2915,16 +2915,16 @@
         },
         {
             "name": "sidus/eav-bootstrap-bundle",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVBootstrapBundle.git",
-                "reference": "a16905747351b0cb14b870b91ae5b4b99d16e9f2"
+                "reference": "84d712c920166be275a157defe5920b2510b421d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/a16905747351b0cb14b870b91ae5b4b99d16e9f2",
-                "reference": "a16905747351b0cb14b870b91ae5b4b99d16e9f2",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/84d712c920166be275a157defe5920b2510b421d",
+                "reference": "84d712c920166be275a157defe5920b2510b421d",
                 "shasum": ""
             },
             "require": {
@@ -2961,7 +2961,7 @@
                 "bootstrap",
                 "eav"
             ],
-            "time": "2017-06-13 17:32:19"
+            "time": "2017-06-14 10:02:06"
         },
         {
             "name": "sidus/eav-datagrid-bundle",
