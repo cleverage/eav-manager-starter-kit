@@ -1,6 +1,6 @@
 {
-    "name": "client/project",
-    "license": "proprietary",
+    "name": "cleverage/eav-manager-starter-kit",
+    "license": "GPL-3.0",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -11,97 +11,77 @@
             "app/AppCache.php"
         ]
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@git.clever-age.net:clever-age-practice-manager/eav-manager.git"
+    "autoload-dev": {
+        "psr-4": {
         }
-    ],
+    },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=7.0",
         "ext-intl": "*",
-        "ext-pdo": "*",
-        "ext-pdo_mysql": "*",
-        "ext-mongo": "*",
-        "ext-mysql": "*",
-        "ext-curl": "*",
-        "ext-gd": "*",
-        "ext-apcu": "*",
-        "symfony/symfony": "2.8.*",
-        "doctrine/orm": "^2.4.8",
-        "doctrine/doctrine-bundle": "~1.4",
-        "symfony/assetic-bundle": "~2.3",
-        "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~5.0",
+
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0",
+        "symfony/monolog-bundle": "^3.1.0",
+        "symfony/polyfill-apcu": "^1.0",
+        "symfony/swiftmailer-bundle": "^2.3.10",
+        "symfony/symfony": "3.3.*",
+        "twig/twig": "^1.0||^2.0",
 
-        "friendsofsymfony/user-bundle": "~1.3.6",
-        "friendsofsymfony/jsrouting-bundle": "~1.5",
-        "liip/imagine-bundle": "1.5.*",
-        "exercise/htmlpurifier-bundle": "~0.2",
-        "tinymce/tinymce": "4.3.*",
+        "cleverage/eav-manager": "1.2.*",
 
-        "cleverage/eav-manager": "dev-master",
-
-        "sidus/eav-model-bundle": "dev-master",
-        "sidus/eav-bootstrap-bundle": "dev-master",
-        "sidus/filter-bundle": "dev-master",
-        "sidus/eav-filter-bundle": "dev-master",
-        "sidus/datagrid-bundle": "dev-master",
-        "sidus/eav-datagrid-bundle": "dev-master",
-        "sidus/eav-variant-bundle": "dev-master",
-        "sidus/publishing-bundle": "dev-master",
-        "sidus/file-upload-bundle": "dev-master",
-        "sidus/admin-bundle": "dev-master"
+        "symfony/assetic-bundle": "^2.8"
     },
     "require-dev": {
-        "nuovo/spreadsheet-reader": "0.5.11",
-        "doctrine/doctrine-fixtures-bundle": "2.3.*",
-        "sensio/generator-bundle": "~3.0",
-        "symfony/phpunit-bridge": "~2.7"
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
-        "post-install-cmd": [
+        "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "cp -r vendor/tinymce/tinymce vendor/stfalcon/tinymce-bundle/Stfalcon/Bundle/TinymceBundle/Resources/public/vendor",
             "Sidus\\FileUploadBundle\\Composer\\ScriptHandler::symlinkJQueryFileUpload",
+            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrapSass",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrapSass",
-            "php app/console assetic:dump"
+            "php bin/console assetic:dump"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
         ],
         "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "cp -r vendor/tinymce/tinymce vendor/stfalcon/tinymce-bundle/Stfalcon/Bundle/TinymceBundle/Resources/public/vendor",
-            "Sidus\\FileUploadBundle\\Composer\\ScriptHandler::symlinkJQueryFileUpload",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-            "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrapSass",
-            "php app/console assetic:dump"
+            "@symfony-scripts"
         ]
     },
     "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.6.11"
-        },
         "component-dir": "web/assets",
-        "component-baseurl": "/assets"
+        "component-baseurl": "/assets",
+        "preferred-install": {
+            "cleverage/*": "source",
+            "sidus/*": "source"
+        }
     },
     "extra": {
         "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
         "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
         "symfony-assets-install": "symlink",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        }
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_host": "DATABASE_HOST",
+                "database_port": "DATABASE_PORT",
+                "database_name": "DATABASE_NAME",
+                "database_user": "DATABASE_USER",
+                "database_password": "DATABASE_PASSWORD"
+            }
+        },
+        "branch-alias": null
     }
 }

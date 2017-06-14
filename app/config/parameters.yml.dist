@@ -1,29 +1,27 @@
 # This file is a "template" of what your parameters.yml file should look like
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
-# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     client_project
-    database_user:     client
+    database_host: 127.0.0.1
+    database_port: ~
+    database_name: symfony
+    database_user: root
     database_password: ~
-    # You should uncomment this if you want use pdo_sqlite
-    # database_path: "%kernel.root_dir%/data.db3"
+    # You should uncomment this if you want to use pdo_sqlite
+    #database_path: '%kernel.project_dir%/var/data/data.sqlite'
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
-    mailer_user:       ~
-    mailer_password:   ~
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: ~
+    mailer_password: ~
 
     # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret: ThisTokenIsNotSoSecretChangeIt
 
-    fos_elastica.host: localhost
-    fos_elastica.port: 9200
-    elastica_enabled: false
-    publishing_enabled: false
+    # UglifyJS & UglifyCSS path configuration
+    node_path: /usr/bin/nodejs
+    node_uglifyjs_path: /usr/local/bin/uglifyjs
+    node_uglifycss_path: /usr/local/bin/uglifycss
 
-    # Can be /usr/bin/nodejs
-    node_path: /usr/bin/node
-    node_uglifyjs_path: /usr/bin/uglifyjs
-    node_uglifycss_path: /usr/bin/uglifycss
+    # Needed when app is behind a reverse proxy
+    trusted_proxies: ~

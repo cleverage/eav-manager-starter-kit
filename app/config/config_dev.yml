@@ -1,9 +1,10 @@
 imports:
     - { resource: config.yml }
+    - { resource: '@SidusEAVModelBundle/Resources/config/services/annotation_generator.yml' }
 
 framework:
     router:
-        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        resource: '%kernel.project_dir%/app/config/routing_dev.yml'
         strict_requirements: true
     profiler: { only_exceptions: false }
 
@@ -11,40 +12,31 @@ web_profiler:
     toolbar: true
     intercept_redirects: false
 
-assetic:
-    use_controller: true
-
 monolog:
     handlers:
         main:
             type: stream
-            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
             level: debug
-            channels: [!event]
+            channels: ['!event']
         console:
-            type:   console
-            bubble: false
-            channels: [!event, !doctrine]
+            type: console
+            process_psr_3_messages: false
+            channels: ['!event', '!doctrine', '!console']
+        # To follow logs in real time, execute the following command:
+        # `bin/console server:log -vv`
+        server_log:
+            type: server_log
+            process_psr_3_messages: false
+            host: 127.0.0.1:9911
         # uncomment to get logging in your browser
         # you may have to allow bigger header sizes in your Web server configuration
         #firephp:
-        #    type:   firephp
-        #    level:  info
+        #    type: firephp
+        #    level: info
         #chromephp:
-        #    type:   chromephp
-        #    level:  info
+        #    type: chromephp
+        #    level: info
 
 #swiftmailer:
-#    delivery_address: me@example.com
-
-doctrine:
-    dbal:
-        connections:
-            fixtures:
-                driver:   pdo_mysql
-                host:     "%database_host%"
-                port:     "%database_port%"
-                dbname:   "%database_name%_old"
-                user:     "%database_user%"
-                password: "%database_password%"
-                charset:  UTF8
+#    delivery_addresses: ['me@example.com']

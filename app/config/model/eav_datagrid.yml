@@ -1,6 +1,6 @@
 sidus_eav_data_grid:
     configurations:
-        data:
+        base:
             family: Base
             filter_config:
                 sortable:
@@ -10,22 +10,15 @@ sidus_eav_data_grid:
                 fields: []
             columns:
                 id:
-                    label: "#"
+                    label: '#'
                 label:
-                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                    template: '%clickable.template%'
                 createdAt: ~
                 updatedAt: ~
                 actions:
-                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"
+                    template: '%eav_datagrid.actions%'
             actions:
-                create:
-                    form_type: admin_link
-                    label: admin.action.create.label
-                    action: create
-                    icon: plus
-                    attr:
-                        class: btn-primary
-                        data-target: tg_right
+                create: '%create.button%'
             reset_button:
                 attr:
                     data-target: tg_center
@@ -33,7 +26,7 @@ sidus_eav_data_grid:
         # Configuration Example
         page:
             family: Page
-            parent: data
+            parent: base
             filter_config:
                 sortable:
                     - id
@@ -51,10 +44,10 @@ sidus_eav_data_grid:
                 id:
                     label: "#"
                 title:
-                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                    template: '%clickable.template%'
                 slug: ~
                 parentPage: ~
                 createdAt: ~
                 updatedAt: ~
                 actions:
-                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"
+                    template: '%eav_datagrid.actions%'

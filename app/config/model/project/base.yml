@@ -3,33 +3,25 @@ sidus_eav_model:
         Base:
             instantiable: false
             attributeAsLabel: title
+            attributeAsIdentifier: slug
             attributes:
-              - title
-              - workflowStatus
-              - slug
+                title:
+                    required: true
 
+                slug:
+                    type: string_identifier
+                    validation_rules:
+                        - Regex:
+                            pattern: '/^[a-z0-9]+(?:[-\_][a-z0-9]+)*$/'
 
-    attributes:
-        title:
-            group: content
-            required: true
-
-        workflowStatus:
-            group: meta
-            type: choice
-            default: draft
-            form_options:
-                choices:
-                    draft: Draft
-                    to_validate: To Validate
-                    rejected: Rejected
-                    validated: Validated
-                    published: Published
-
-        slug:
-            group: meta
-            unique: true
-            required: true
-            validation_rules:
-                - Regex:
-                    pattern: '/^[a-z0-9]+(?:[-\_][a-z0-9]+)*$/'
+                workflowStatus:
+                    type: choice
+                    required: true
+                    default: draft
+                    form_options:
+                        choices:
+                            Draft: draft
+                            To Validate: to_validate
+                            Rejected: rejected
+                            Validated: validated
+                            Published: published

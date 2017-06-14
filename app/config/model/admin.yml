@@ -1,11 +1,9 @@
 sidus_admin:
-    fallback_template: CleverAgeEAVManagerAdminBundle:Base
     configurations:
         myadmin:
-            controller: CleverAgeEAVManagerAdminBundle:Data
+            controller: '%eav.controller%'
             entity: '%sidus_data_class%'
             prefix: /myadmin
-            default_form_type: sidus_tabbed_data
             actions:
                 index:
                     path:     /
@@ -13,11 +11,14 @@ sidus_admin:
                     path:     /{familyCode}/list
                 create:
                     path:     /{familyCode}/create
+                    form_type: '%eav_form.type%'
                 edit:
                     path:     /{familyCode}/{id}/edit
+                    form_type: '%eav_form.type%'
                 delete:
                     path:     /{familyCode}/{id}/delete
             options:
-                datagrid: data
+                icon: database
+                datagrid: base
                 families:
                     Page: ~

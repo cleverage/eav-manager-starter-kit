@@ -4,25 +4,22 @@ sidus_eav_model:
             parent: Base
             attributeAsLabel: title
             attributes:
-              - content
-              - parentPage
-              - illustration
+                content:
+                    group: content
+                    type: html
+                    form_options:
+                        tinymce_theme: advanced
 
-    attributes:
-        content:
-            group: content
-            type: html
-            form_options:
-                tinymce_theme: advanced
+                parentPage:
+                    group: content
+                    type: autocomplete_data_selector
+                    options:
+                        allowed_families:
+                            - Page
 
-        parentPage:
-            group: content
-            type: autocomplete_data
-            form_options:
-                family: Page
-
-        illustration:
-            group: content
-            type: media_browser
-            form_options:
-                family: Image
+                illustration:
+                    group: content
+                    type: media_browser
+                    options:
+                        allowed_families:
+                            - Image
