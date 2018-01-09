@@ -1,0 +1,5 @@
+parameters:
+    locale: en
+
+    sidus_data_class: ClientNamespace\EAVModelBundle\Entity\Data
+    sidus_value_class: ClientNamespace\EAVModelBundle\Entity\Value

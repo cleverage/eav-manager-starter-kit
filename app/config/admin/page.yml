@@ -1,9 +1,9 @@
 sidus_admin:
     configurations:
-        myadmin:
+        page:
             controller: '%eav.controller%'
             entity: '%sidus_data_class%'
-            prefix: /myadmin
+            prefix: /page
             actions:
                 index:
                     path:     /
@@ -12,13 +12,15 @@ sidus_admin:
                 create:
                     path:     /{familyCode}/create
                     form_type: '%eav_form.type%'
+                read:
+                    path:     /{familyCode}/read/{id}
+                    form_type: '%eav_form.type%'
                 edit:
-                    path:     /{familyCode}/{id}/edit
+                    path:     /{familyCode}/edit/{id}
                     form_type: '%eav_form.type%'
                 delete:
-                    path:     /{familyCode}/{id}/delete
+                    path:     /{familyCode}/delete/{id}
             options:
                 icon: database
-                datagrid: base
                 families:
                     Page: ~

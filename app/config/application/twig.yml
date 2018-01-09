@@ -1,0 +1,7 @@
+# Twig Configuration
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    form_themes:
+        - SidusDataGridBundle:Form:fields.html.twig
+        - CleverAgeEAVManagerLayoutBundle:Form:form.fields.html.twig

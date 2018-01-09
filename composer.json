@@ -11,12 +11,8 @@
             "app/AppCache.php"
         ]
     },
-    "autoload-dev": {
-        "psr-4": {
-        }
-    },
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.1",
         "ext-intl": "*",
 
         "doctrine/doctrine-bundle": "^1.6",
@@ -30,25 +26,45 @@
         "symfony/symfony": "3.3.*",
         "twig/twig": "^1.0||^2.0",
 
-        "cleverage/eav-manager": "1.2.*",
+        "tinymce/tinymce": "4.5.*",
+        "smalot/bootstrap-datetimepicker": "^2.4",
 
-        "symfony/assetic-bundle": "^2.8"
+        "cleverage/eav-manager": "^1.3.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "smalot/bootstrap-datetimepicker",
+                "version": "2.4.4",
+                "dist": {
+                    "url": "https://github.com/smalot/bootstrap-datetimepicker/archive/2.4.4.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/smalot/bootstrap-datetimepicker.git",
+                    "type": "git",
+                    "reference": "tags/2.4.4"
+                }
+            }
+        }
+    ],
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "cp -r vendor/tinymce/tinymce vendor/stfalcon/tinymce-bundle/Stfalcon/Bundle/TinymceBundle/Resources/public/vendor",
+            "cp -r vendor/smalot/bootstrap-datetimepicker/* vendor/mopa/bootstrap-bundle/Mopa/Bundle/BootstrapBundle/Resources/public/components/smalot-bootstrap-datetimepicker",
             "Sidus\\FileUploadBundle\\Composer\\ScriptHandler::symlinkJQueryFileUpload",
             "Mopa\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::postInstallSymlinkTwitterBootstrapSass",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-            "php bin/console assetic:dump"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-install-cmd": [
             "@symfony-scripts"

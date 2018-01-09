@@ -4,11 +4,9 @@
 parameters:
     database_host: 127.0.0.1
     database_port: ~
-    database_name: symfony
+    database_name: eav_manager
     database_user: root
     database_password: ~
-    # You should uncomment this if you want to use pdo_sqlite
-    #database_path: '%kernel.project_dir%/var/data/data.sqlite'
 
     mailer_transport: smtp
     mailer_host: 127.0.0.1
@@ -17,11 +15,6 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
-
-    # UglifyJS & UglifyCSS path configuration
-    node_path: /usr/bin/nodejs
-    node_uglifyjs_path: /usr/local/bin/uglifyjs
-    node_uglifycss_path: /usr/local/bin/uglifycss
 
     # Needed when app is behind a reverse proxy
     trusted_proxies: ~

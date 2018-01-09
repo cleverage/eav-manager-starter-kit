@@ -18,8 +18,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            // Not part of the standard distribution anymore:
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         ];
 
         $eavBundles = CleverAge\EAVManager\EAVKernelBundleLoader::getBundles();

@@ -1,0 +1,31 @@
+sidus_data_grid:
+    configurations:
+        page:
+            parent: base
+            query_handler:
+                provider: sidus.eav
+                options:
+                    family: Page
+                sortable:
+                    - id
+                    - title
+                    - slug
+                    - parentPage
+                    - createdAt
+                    - updatedAt
+                filters:
+                    title: ~
+                    slug: ~
+                    parentPage:
+                        type: autocomplete_data
+            columns:
+                id:
+                    label: "#"
+                title:
+                    template: '%clickable.template%'
+                slug: ~
+                parentPage: ~
+                createdAt: ~
+                updatedAt: ~
+                actions:
+                    template: '%eav_datagrid.actions%'
