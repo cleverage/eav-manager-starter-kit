@@ -19,14 +19,17 @@
 /web/bundles/
 
 .idea/
-/.sass-cache/
 /web/assets/
 /web/css/
 /web/js/
 /web/images/cache/
 
-/deploy/.bundle
-/deploy/log/*
+/docker/data/*
+!docker/data/.gitkeep
+/docker/ssh/*
+!docker/ssh/.gitkeep
+/docker/.env
+/docker/docker-compose-override.yml
 
 /app/data/*
 !/app/data/.gitkeep
