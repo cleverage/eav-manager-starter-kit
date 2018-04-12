@@ -22,14 +22,14 @@ $ sf doctrine:schema:create
 ### Creating your admin user
 
 ````bash
-$ sf eavmanager:create-user -a your-email@my-domain.com
+$ sf eavmanager:create-user -a your-email@my-domain.com -pMyPassw0rd
 ````
 
 ### Accessing the application
 
-The Nginx server will answer to any domain so you can either go to [http://127.0.0.1] or to any domain matching this IP.
+The Nginx server will answer to any domain so you can either go to [http://127.0.0.1]() or to any domain matching this IP.
 
-All the emails sent by the application are caught by mailcatcher: [http://127.0.0.1:1080]
+All the emails sent by the application are caught by mailcatcher: [http://127.0.0.1:1080]()
 
 ### Managing docker containers
 

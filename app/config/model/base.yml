@@ -1,7 +1,9 @@
 sidus_eav_model:
     families:
+        # In this example, Base is an abstract family that defines some basic info that can be shared accross multiple
+        # families.
         Base:
-            instantiable: false
+            instantiable: false # Meaning it's an abstract
             attributeAsLabel: title
             attributeAsIdentifier: slug
             attributes:
@@ -10,7 +12,7 @@ sidus_eav_model:
 
                 slug:
                     type: string_identifier
-                    validation_rules:
+                    validation_rules: # Use any Symfony validation rule
                         - Regex:
                             pattern: '/^[a-z0-9]+(?:[-\_][a-z0-9]+)*$/'
 
@@ -20,6 +22,8 @@ sidus_eav_model:
                     default: draft
                     form_options:
                         choices:
+                            # You can also use translation keys instead of labels and put this array inside a parameter
+                            # if you need to reuse these same values in other places
                             Draft: draft
                             To Validate: to_validate
                             Rejected: rejected

@@ -1,0 +1,10 @@
+services:
+    monolog.processor.web:
+        class: Symfony\Bridge\Monolog\Processor\WebProcessor
+        tags:
+            - { name: monolog.processor }
+
+    monolog.formatter.standard:
+        class: Monolog\Formatter\LineFormatter
+        arguments:
+            - "[%%datetime%%](%%extra.ip%%) %%channel%%.%%level_name%%:\n  %%message%%\n  Context: %%context%%\n\n"

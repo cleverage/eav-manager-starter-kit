@@ -1,7 +1,6 @@
 sidus_data_grid:
     configurations:
         page:
-            parent: base
             query_handler:
                 provider: sidus.eav
                 options:
@@ -29,3 +28,8 @@ sidus_data_grid:
                 updatedAt: ~
                 actions:
                     template: '%eav_datagrid.actions%'
+            actions:
+                create: '%create.button%'
+            reset_button:
+                attr:
+                    data-target: tg_center
