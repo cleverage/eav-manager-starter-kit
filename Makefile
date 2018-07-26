@@ -1,3 +1,4 @@
+DC ?= cd docker && docker-compose
 
 .PHONY: help
 help: ## This help
@@ -6,24 +7,27 @@ help: ## This help
 -include docker/.env
 docker/.env:
 	cp docker/.env.dist docker/.env
-	$(MAKE) docker/.env
 
 .PHONY: install
 install: start ## Run docker instance and launch composer install
-	cd docker && docker-compose exec www composer install
+	$(DC) exec www composer install
 
 .PHONY: start
 start: docker/.env ## Start docker
-	cd docker && docker-compose up --build -d
+	$(DC) up --build -d
 
 .PHONY: stop
 stop: ## Stop and destroy docker images
-	cd docker && docker-compose down
+	$(DC) down --remove-orphans
 
 .PHONY: shell
-shell: ## Deploy to staging
-	cd docker && docker-compose exec www zsh -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec zsh"
+shell: start ## Deploy to staging
+	$(DC) exec www zsh -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec zsh"
 
 .PHONY: docker-status
 docker-status: ## Diplay containers status
-	cd docker && docker-compose ps
+	$(DC) ps
+
+.PHONY: cc
+cc: ## Clear Symfony cache
+	rm -rf var/cache/*
