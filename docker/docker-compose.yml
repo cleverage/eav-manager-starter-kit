@@ -40,7 +40,7 @@ services:
         volumes:
             - ./data/mysql:/var/lib/mysql
         environment:
-            MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+            MYSQL_RANDOM_ROOT_PASSWORD: 'true'
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -49,3 +49,10 @@ services:
         image: zolweb/docker-mailcatcher:latest
         ports:
             - ${MAILCATCHER_PORT}:1080
+
+    assets:
+        image: node:8-alpine
+        working_dir: /app/assets
+        volumes:
+            - '${APP_DIR}:/app/'
+        command: ['yarn', 'install']
