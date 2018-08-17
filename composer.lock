@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae0cd2402d974f0d463f2859bd47df9f",
+    "content-hash": "55e6766d79cbbc107cd747349c2423c8",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/eav-manager.git",
-                "reference": "f8d54dc9284105a898debbc054d73c402e8da837"
+                "reference": "a3c706381dd3c96c4e57beb7cd1993b81223f47e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/f8d54dc9284105a898debbc054d73c402e8da837",
-                "reference": "f8d54dc9284105a898debbc054d73c402e8da837",
+                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/a3c706381dd3c96c4e57beb7cd1993b81223f47e",
+                "reference": "a3c706381dd3c96c4e57beb7cd1993b81223f47e",
                 "shasum": ""
             },
             "require": {
@@ -76,12 +76,12 @@
                 "liip/imagine-bundle": "~1.7",
                 "php": ">=7.1",
                 "sidus/admin-bundle": "dev-v1.3-dev",
-                "sidus/datagrid-bundle": "dev-v1.3-dev",
-                "sidus/eav-bootstrap-bundle": "dev-v1.2-dev",
-                "sidus/eav-filter-bundle": "dev-v1.3-dev",
+                "sidus/datagrid-bundle": "dev-v1.4-dev",
+                "sidus/eav-bootstrap-bundle": "dev-v1.3-dev",
+                "sidus/eav-filter-bundle": "dev-v1.4-dev",
                 "sidus/eav-model-bundle": "dev-v1.2-dev",
                 "sidus/file-upload-bundle": "dev-v1.2.x-dev",
-                "sidus/filter-bundle": "dev-v1.3-dev",
+                "sidus/filter-bundle": "dev-v1.4-dev",
                 "symfony/symfony": "~3.3|~4.0",
                 "thomaspark/bootswatch": "~3.3.7"
             },
@@ -123,7 +123,7 @@
                 "manager",
                 "model"
             ],
-            "time": "2018-07-26T17:03:46+00:00"
+            "time": "2018-08-16T17:00:07+00:00"
         },
         {
             "name": "cleverage/process-bundle",
@@ -131,17 +131,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/process-bundle.git",
-                "reference": "b7b6758a6c3f742f2b07bf959fde68c279f4d44f"
+                "reference": "c7ea33f23f98382a46a312e7c6c3575d8047593f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/process-bundle/zipball/b7b6758a6c3f742f2b07bf959fde68c279f4d44f",
-                "reference": "b7b6758a6c3f742f2b07bf959fde68c279f4d44f",
+                "url": "https://api.github.com/repos/cleverage/process-bundle/zipball/c7ea33f23f98382a46a312e7c6c3575d8047593f",
+                "reference": "c7ea33f23f98382a46a312e7c6c3575d8047593f",
                 "shasum": ""
             },
             "require": {
                 "doctrine/doctrine-bundle": "~1.6",
                 "doctrine/orm": "~2.5",
+                "ext-json": "*",
                 "php": ">=7.1",
                 "sidus/base-bundle": "~1.0",
                 "symfony/expression-language": "~3.0|~4.0",
@@ -172,6 +173,12 @@
                     "name": "Valentin Clavreul",
                     "email": "vclavreul@clever-age.com",
                     "role": "Developer"
+                },
+                {
+                    "name": "Madeline Veyrenc",
+                    "email": "mveyrenc@clever-age.com",
+                    "homepage": "https://github.com/mveyrenc",
+                    "role": "Developer"
                 }
             ],
             "description": "Process, import/export, transform and validate data with a simple API with Symfony3",
@@ -184,7 +191,7 @@
                 "task",
                 "transformation"
             ],
-            "time": "2018-07-26T17:04:39+00:00"
+            "time": "2018-08-10T14:26:47+00:00"
         },
         {
             "name": "components/jquery",
@@ -315,16 +322,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "d2c0a83b7533d6912e8d516756ebd34f893e9169"
+                "reference": "46afded9720f40b9dc63542af4e3e43a1177acb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/d2c0a83b7533d6912e8d516756ebd34f893e9169",
-                "reference": "d2c0a83b7533d6912e8d516756ebd34f893e9169",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/46afded9720f40b9dc63542af4e3e43a1177acb0",
+                "reference": "46afded9720f40b9dc63542af4e3e43a1177acb0",
                 "shasum": ""
             },
             "require": {
@@ -367,7 +374,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2018-03-29T19:57:20+00:00"
+            "time": "2018-08-08T08:57:40+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3317,18 +3324,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusAdminBundle.git",
-                "reference": "7994ee003a9ca671bbfbc3d4466c58b30a77bf8d"
+                "reference": "94873ee342439823c19b2ae4e9d3ee74194d284f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/7994ee003a9ca671bbfbc3d4466c58b30a77bf8d",
-                "reference": "7994ee003a9ca671bbfbc3d4466c58b30a77bf8d",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/94873ee342439823c19b2ae4e9d3ee74194d284f",
+                "reference": "94873ee342439823c19b2ae4e9d3ee74194d284f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
                 "sidus/base-bundle": "~1.0",
-                "sidus/datagrid-bundle": "dev-v1.3-dev"
+                "sidus/datagrid-bundle": "dev-v1.3-dev|dev-v1.4-dev"
             },
             "type": "library",
             "autoload": {
@@ -3354,7 +3361,7 @@
                 "action",
                 "admin"
             ],
-            "time": "2018-06-18T13:10:13+00:00"
+            "time": "2018-08-06T15:17:18+00:00"
         },
         {
             "name": "sidus/base-bundle",
@@ -3449,21 +3456,21 @@
         },
         {
             "name": "sidus/datagrid-bundle",
-            "version": "dev-v1.3-dev",
+            "version": "dev-v1.4-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusDataGridBundle.git",
-                "reference": "8836b98518fce8418a37b9cebd67a3e8daa19664"
+                "reference": "bbe631ef049148b52695eac13fcb6457af3c51a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusDataGridBundle/zipball/8836b98518fce8418a37b9cebd67a3e8daa19664",
-                "reference": "8836b98518fce8418a37b9cebd67a3e8daa19664",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusDataGridBundle/zipball/bbe631ef049148b52695eac13fcb6457af3c51a0",
+                "reference": "bbe631ef049148b52695eac13fcb6457af3c51a0",
                 "shasum": ""
             },
             "require": {
                 "sidus/base-bundle": "~1.0",
-                "sidus/filter-bundle": "dev-v1.3-dev"
+                "sidus/filter-bundle": "dev-v1.4-dev"
             },
             "type": "library",
             "autoload": {
@@ -3489,20 +3496,20 @@
                 "datagrid",
                 "sort"
             ],
-            "time": "2018-07-25T11:33:44+00:00"
+            "time": "2018-08-09T14:33:44+00:00"
         },
         {
             "name": "sidus/eav-bootstrap-bundle",
-            "version": "dev-v1.2-dev",
+            "version": "dev-v1.3-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVBootstrapBundle.git",
-                "reference": "7bc7f88143fa0dd09a74e6c0319cbd74d6f51074"
+                "reference": "1faf749695254c89d9237e694d392f1923b4fba3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/7bc7f88143fa0dd09a74e6c0319cbd74d6f51074",
-                "reference": "7bc7f88143fa0dd09a74e6c0319cbd74d6f51074",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/1faf749695254c89d9237e694d392f1923b4fba3",
+                "reference": "1faf749695254c89d9237e694d392f1923b4fba3",
                 "shasum": ""
             },
             "require": {
@@ -3540,25 +3547,25 @@
                 "bootstrap",
                 "eav"
             ],
-            "time": "2018-07-25T16:14:11+00:00"
+            "time": "2018-07-30T12:00:15+00:00"
         },
         {
             "name": "sidus/eav-filter-bundle",
-            "version": "dev-v1.3-dev",
+            "version": "dev-v1.4-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVFilterBundle.git",
-                "reference": "a770418af27a2a80b39672d6795c6e5270959fe0"
+                "reference": "7d428243f4bd6ce37ec7fc1555e476253cfb7139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/a770418af27a2a80b39672d6795c6e5270959fe0",
-                "reference": "a770418af27a2a80b39672d6795c6e5270959fe0",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/7d428243f4bd6ce37ec7fc1555e476253cfb7139",
+                "reference": "7d428243f4bd6ce37ec7fc1555e476253cfb7139",
                 "shasum": ""
             },
             "require": {
                 "sidus/eav-model-bundle": "dev-v1.2-dev",
-                "sidus/filter-bundle": "dev-v1.3-dev"
+                "sidus/filter-bundle": "dev-v1.4-dev"
             },
             "type": "library",
             "autoload": {
@@ -3587,7 +3594,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2018-05-25T15:15:29+00:00"
+            "time": "2018-08-08T15:48:33+00:00"
         },
         {
             "name": "sidus/eav-model-bundle",
@@ -3691,16 +3698,16 @@
         },
         {
             "name": "sidus/filter-bundle",
-            "version": "dev-v1.3-dev",
+            "version": "dev-v1.4-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFilterBundle.git",
-                "reference": "a962a89f7b42968bd2aa1ed1d7596c131e6e1da4"
+                "reference": "de04c2eb37fc9b94bce68af891ca1f73fc2d39bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusFilterBundle/zipball/a962a89f7b42968bd2aa1ed1d7596c131e6e1da4",
-                "reference": "a962a89f7b42968bd2aa1ed1d7596c131e6e1da4",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusFilterBundle/zipball/de04c2eb37fc9b94bce68af891ca1f73fc2d39bd",
+                "reference": "de04c2eb37fc9b94bce68af891ca1f73fc2d39bd",
                 "shasum": ""
             },
             "require": {
@@ -3716,13 +3723,19 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0"
+                "MIT"
             ],
             "authors": [
                 {
                     "name": "Vincent Chalnot",
                     "email": "vincent@sidus.fr",
                     "homepage": "http://chalnot.fr",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Madeline Veyrenc",
+                    "email": "mveyrenc@clever-age.com",
+                    "homepage": "https://github.com/mveyrenc",
                     "role": "Developer"
                 }
             ],
@@ -3734,7 +3747,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2018-05-31T13:02:36+00:00"
+            "time": "2018-08-08T14:54:52+00:00"
         },
         {
             "name": "stfalcon/tinymce-bundle",
@@ -3798,16 +3811,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.9",
+            "version": "v5.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7ffc1ea296ed14bf8260b6ef11b80208dbadba91"
+                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7ffc1ea296ed14bf8260b6ef11b80208dbadba91",
-                "reference": "7ffc1ea296ed14bf8260b6ef11b80208dbadba91",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/181b89f18a90f8925ef805f950d47a7190e9b950",
+                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950",
                 "shasum": ""
             },
             "require": {
@@ -3848,7 +3861,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2018-01-23T07:37:21+00:00"
+            "time": "2018-07-31T09:26:32+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -3915,16 +3928,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "9b83bd010112ec196410849e840d9b9fefcb15ad"
+                "reference": "19e1b73bf255265ad0b568f81766ae2a3266d8d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/9b83bd010112ec196410849e840d9b9fefcb15ad",
-                "reference": "9b83bd010112ec196410849e840d9b9fefcb15ad",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/19e1b73bf255265ad0b568f81766ae2a3266d8d2",
+                "reference": "19e1b73bf255265ad0b568f81766ae2a3266d8d2",
                 "shasum": ""
             },
             "require": {
@@ -3933,7 +3946,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -3967,29 +3980,32 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
-                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -4022,7 +4038,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-04-30T19:57:29+00:00"
+            "time": "2018-08-06T14:22:27+00:00"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -4085,16 +4101,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.13",
+            "version": "v3.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "c406c5a4f11fc00b60d3ec585125350418c4568d"
+                "reference": "f50e17fa4edd6216f7fe5b908f04e64ba1d19a9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/c406c5a4f11fc00b60d3ec585125350418c4568d",
-                "reference": "c406c5a4f11fc00b60d3ec585125350418c4568d",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/f50e17fa4edd6216f7fe5b908f04e64ba1d19a9e",
+                "reference": "f50e17fa4edd6216f7fe5b908f04e64ba1d19a9e",
                 "shasum": ""
             },
             "require": {
@@ -4236,7 +4252,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-07-23T16:37:45+00:00"
+            "time": "2018-08-01T14:48:04+00:00"
         },
         {
             "name": "thomaspark/bootswatch",
@@ -4298,16 +4314,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.5.8",
+            "version": "4.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "b1a185342e17e8bf331459c41c36b63e1d089117"
+                "reference": "380b70489c11f499735d9ec53c8d07ae1f37b2de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/b1a185342e17e8bf331459c41c36b63e1d089117",
-                "reference": "b1a185342e17e8bf331459c41c36b63e1d089117",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/380b70489c11f499735d9ec53c8d07ae1f37b2de",
+                "reference": "380b70489c11f499735d9ec53c8d07ae1f37b2de",
                 "shasum": ""
             },
             "type": "component",
@@ -4340,7 +4356,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2017-10-05T11:39:51+00:00"
+            "time": "2018-08-03T12:00:41+00:00"
         },
         {
             "name": "twbs/bootstrap-sass",
@@ -4563,16 +4579,16 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "6b1059db5b368db769e4392c6cb6cc139e56640d"
+                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/6b1059db5b368db769e4392c6cb6cc139e56640d",
-                "reference": "6b1059db5b368db769e4392c6cb6cc139e56640d",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c21db169075c6ec4b342149f446e7b7b724f95eb",
+                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb",
                 "shasum": ""
             },
             "require": {
@@ -4593,8 +4609,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev",
-                    "dev-develop": "3.3-dev"
+                    "dev-master": "3.3.x-dev",
+                    "dev-develop": "3.4.x-dev"
                 }
             },
             "autoload": {
@@ -4612,7 +4628,7 @@
                 "code",
                 "zf2"
             ],
-            "time": "2017-10-20T15:21:32+00:00"
+            "time": "2018-08-13T20:36:59+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -4670,6 +4686,167 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "roave/security-advisories",
+            "version": "dev-master",
+            "conflict": {
+                "3f/pygmentize": "<1.2",
+                "adodb/adodb-php": "<5.20.12",
+                "amphp/artax": "<1.0.6|>=2,<2.0.6",
+                "amphp/http": "<1.0.1",
+                "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
+                "aws/aws-sdk-php": ">=3,<3.2.1",
+                "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
+                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=3.4,<3.4.14|>=3.5,<3.5.17|>=3.6,<3.6.4",
+                "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
+                "cartalyst/sentry": "<=2.1.6",
+                "codeigniter/framework": "<=3.0.6",
+                "composer/composer": "<=1.0.0-alpha11",
+                "contao-components/mediaelement": ">=2.14.2,<2.21.1",
+                "contao/core": ">=2,<3.5.35",
+                "contao/core-bundle": ">=4,<4.4.18|>=4.5,<4.5.8",
+                "contao/listing-bundle": ">=4,<4.4.8",
+                "contao/newsletter-bundle": ">=4,<4.1",
+                "doctrine/annotations": ">=1,<1.2.7",
+                "doctrine/cache": ">=1,<1.3.2|>=1.4,<1.4.2",
+                "doctrine/common": ">=2,<2.4.3|>=2.5,<2.5.1",
+                "doctrine/dbal": ">=2,<2.0.8|>=2.1,<2.1.2",
+                "doctrine/doctrine-bundle": "<1.5.2",
+                "doctrine/doctrine-module": "<=0.7.1",
+                "doctrine/mongodb-odm": ">=1,<1.0.2",
+                "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
+                "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1",
+                "dompdf/dompdf": ">=0.6,<0.6.2",
+                "drupal/core": ">=7,<7.59|>=8,<8.4.8|>=8.5,<8.5.3",
+                "drupal/drupal": ">=7,<7.59|>=8,<8.4.8|>=8.5,<8.5.3",
+                "erusev/parsedown": "<1.7",
+                "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.3|>=5.4,<5.4.11.3|>=2017.8,<2017.8.1.1|>=2017.12,<2017.12.2.1",
+                "firebase/php-jwt": "<2",
+                "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
+                "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
+                "fuel/core": "<1.8.1",
+                "gree/jose": "<=2.2",
+                "gregwar/rst": "<1.0.3",
+                "guzzlehttp/guzzle": ">=6,<6.2.1|>=4.0.0-rc2,<4.2.4|>=5,<5.3.1",
+                "illuminate/auth": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.10",
+                "illuminate/cookie": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
+                "illuminate/database": ">=4,<4.0.99|>=4.1,<4.1.29",
+                "illuminate/encryption": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.40|>=5.6,<5.6.15",
+                "joomla/session": "<1.3.1",
+                "kreait/firebase-php": ">=3.2,<3.8.1",
+                "laravel/framework": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
+                "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
+                "magento/magento1ce": "<1.9.3.9",
+                "magento/magento1ee": ">=1.9,<1.14.3.2",
+                "magento/product-community-edition": ">=2,<2.2.5",
+                "monolog/monolog": ">=1.8,<1.12",
+                "namshi/jose": "<2.2",
+                "onelogin/php-saml": "<2.10.4",
+                "oro/crm": ">=1.7,<1.7.4",
+                "oro/platform": ">=1.7,<1.7.4",
+                "padraic/humbug_get_contents": "<1.1.2",
+                "pagarme/pagarme-php": ">=0,<3",
+                "paragonie/random_compat": "<2",
+                "paypal/merchant-sdk-php": "<3.12",
+                "phpmailer/phpmailer": ">=5,<5.2.24",
+                "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
+                "phpxmlrpc/extras": "<0.6.1",
+                "propel/propel": ">=2.0.0-alpha1,<=2.0.0-alpha7",
+                "propel/propel1": ">=1,<=1.7.1",
+                "pusher/pusher-php-server": "<2.2.1",
+                "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
+                "sensiolabs/connect": "<4.2.3",
+                "shopware/shopware": "<5.3.7",
+                "silverstripe/cms": ">=3,<=3.0.11|>=3.1,<3.1.11",
+                "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
+                "silverstripe/framework": ">=3,<3.3",
+                "silverstripe/userforms": "<3",
+                "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
+                "simplesamlphp/simplesamlphp": "<1.15.2",
+                "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
+                "slim/slim": "<2.6",
+                "socalnick/scn-social-auth": "<1.15.2",
+                "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
+                "stormpath/sdk": ">=0,<9.9.99",
+                "swiftmailer/swiftmailer": ">=4,<5.4.5",
+                "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
+                "sylius/sylius": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
+                "symfony/dependency-injection": ">=2,<2.0.17",
+                "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2",
+                "symfony/http-foundation": ">=2,<2.7.49|>=2.8,<2.8.44|>=3,<3.3.18|>=3.4,<3.4.14|>=4,<4.0.14|>=4.1,<4.1.3",
+                "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
+                "symfony/intl": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/routing": ">=2,<2.0.19",
+                "symfony/security": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-bundle": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<2.8.37|>=3,<3.3.17|>=3.4,<3.4.7|>=4,<4.0.7",
+                "symfony/security-csrf": ">=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-guard": ">=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/serializer": ">=2,<2.0.11",
+                "symfony/symfony": ">=2,<2.7.49|>=2.8,<2.8.44|>=3,<3.3.18|>=3.4,<3.4.14|>=4,<4.0.14|>=4.1,<4.1.3",
+                "symfony/translation": ">=2,<2.0.17",
+                "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
+                "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
+                "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
+                "thelia/backoffice-default-template": ">=2.1,<2.1.2",
+                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+                "titon/framework": ">=0,<9.9.99",
+                "twig/twig": "<1.20",
+                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.30|>=8,<8.7.17|>=9,<9.3.2",
+                "typo3/cms-core": ">=8,<8.7.17|>=9,<9.3.2",
+                "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
+                "typo3/neos": ">=1.1,<1.1.3|>=1.2,<1.2.13|>=2,<2.0.4",
+                "willdurand/js-translation-bundle": "<2.1.1",
+                "yiisoft/yii": ">=1.1.14,<1.1.15",
+                "yiisoft/yii2": "<2.0.15",
+                "yiisoft/yii2-bootstrap": "<2.0.4",
+                "yiisoft/yii2-dev": "<2.0.15",
+                "yiisoft/yii2-elasticsearch": "<2.0.5",
+                "yiisoft/yii2-gii": "<2.0.4",
+                "yiisoft/yii2-jui": "<2.0.4",
+                "yiisoft/yii2-redis": "<2.0.8",
+                "zendframework/zend-cache": ">=2.4,<2.4.8|>=2.5,<2.5.3",
+                "zendframework/zend-captcha": ">=2,<2.4.9|>=2.5,<2.5.2",
+                "zendframework/zend-crypt": ">=2,<2.4.9|>=2.5,<2.5.2",
+                "zendframework/zend-db": ">=2,<2.0.99|>=2.1,<2.1.99|>=2.2,<2.2.10|>=2.3,<2.3.5",
+                "zendframework/zend-diactoros": ">=1,<1.8.4",
+                "zendframework/zend-feed": ">=1,<2.10.3",
+                "zendframework/zend-form": ">=2,<2.2.7|>=2.3,<2.3.1",
+                "zendframework/zend-http": ">=1,<2.8.1",
+                "zendframework/zend-json": ">=2.1,<2.1.6|>=2.2,<2.2.6",
+                "zendframework/zend-ldap": ">=2,<2.0.99|>=2.1,<2.1.99|>=2.2,<2.2.8|>=2.3,<2.3.3",
+                "zendframework/zend-mail": ">=2,<2.4.11|>=2.5,<2.7.2",
+                "zendframework/zend-navigation": ">=2,<2.2.7|>=2.3,<2.3.1",
+                "zendframework/zend-session": ">=2,<2.0.99|>=2.1,<2.1.99|>=2.2,<2.2.9|>=2.3,<2.3.4",
+                "zendframework/zend-validator": ">=2.3,<2.3.6",
+                "zendframework/zend-view": ">=2,<2.2.7|>=2.3,<2.3.1",
+                "zendframework/zend-xmlrpc": ">=2.1,<2.1.6|>=2.2,<2.2.6",
+                "zendframework/zendframework": "<2.5.1",
+                "zendframework/zendframework1": "<1.12.20",
+                "zendframework/zendopenid": ">=2,<2.0.2",
+                "zendframework/zendxml": ">=1,<1.0.1",
+                "zetacomponents/mail": "<1.8.2",
+                "zf-commons/zfc-user": "<1.2.2",
+                "zfcampus/zf-apigility-doctrine": ">=1,<1.0.3",
+                "zfr/zfr-oauth2-server-module": "<0.1.2"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
+            "time": "2018-08-14T15:39:17+00:00"
+        },
         {
             "name": "sensio/generator-bundle",
             "version": "v3.1.7",
@@ -4768,16 +4945,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.13",
+            "version": "v3.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "62c8349f21927b9a5975d89ee065e84d233a34e5"
+                "reference": "4519412e6b503e3ca4ef43fb6a92b75fb5667824"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/62c8349f21927b9a5975d89ee065e84d233a34e5",
-                "reference": "62c8349f21927b9a5975d89ee065e84d233a34e5",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/4519412e6b503e3ca4ef43fb6a92b75fb5667824",
+                "reference": "4519412e6b503e3ca4ef43fb6a92b75fb5667824",
                 "shasum": ""
             },
             "require": {
@@ -4830,7 +5007,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-07-05T11:53:23+00:00"
+            "time": "2018-07-26T11:19:56+00:00"
         }
     ],
     "aliases": [],
@@ -4844,7 +5021,8 @@
         "sidus/datagrid-bundle": 20,
         "sidus/file-upload-bundle": 20,
         "sidus/admin-bundle": 20,
-        "cleverage/process-bundle": 20
+        "cleverage/process-bundle": 20,
+        "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
