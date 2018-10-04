@@ -1,6 +1,6 @@
 sidus_data_grid:
     configurations:
-        page:
+        Page:
             query_handler:
                 provider: sidus.eav
                 options:
@@ -32,4 +32,4 @@ sidus_data_grid:
                 create: '%create.button%'
             reset_button:
                 attr:
-                    data-target: tg_center
+                    data-target-element: '#tg_center'

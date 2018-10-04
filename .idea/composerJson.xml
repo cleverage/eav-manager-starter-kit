@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ComposerJsonPluginSettings">
     <unboundedVersionInspectionSettings>
-      <excludedPackages />
+      <excludedPackages>
+        <pattern pattern="roave/*" />
+      </excludedPackages>
     </unboundedVersionInspectionSettings>
     <customRepositories />
+    <composerUpdateOptions />
   </component>
 </project>

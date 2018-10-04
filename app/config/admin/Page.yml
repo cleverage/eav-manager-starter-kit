@@ -1,12 +1,10 @@
 sidus_admin:
     configurations:
-        page:
+        publication:
             controller: '%eav.controller%'
             entity: '%sidus_data_class%'
-            prefix: /page
+            prefix: /publication
             actions:
-                index:
-                    path:     /
                 list:
                     path:     /{familyCode}/list
                 create:

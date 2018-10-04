@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55e6766d79cbbc107cd747349c2423c8",
+    "content-hash": "5923448ce7705d90af29dd76e23929d6",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -58,30 +58,29 @@
         },
         {
             "name": "cleverage/eav-manager",
-            "version": "dev-v1.4-dev",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/eav-manager.git",
-                "reference": "a3c706381dd3c96c4e57beb7cd1993b81223f47e"
+                "reference": "5b2048e1939d78cfac4c6990f92939c396c7a51c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/a3c706381dd3c96c4e57beb7cd1993b81223f47e",
-                "reference": "a3c706381dd3c96c4e57beb7cd1993b81223f47e",
+                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/5b2048e1939d78cfac4c6990f92939c396c7a51c",
+                "reference": "5b2048e1939d78cfac4c6990f92939c396c7a51c",
                 "shasum": ""
             },
             "require": {
-                "cleverage/process-bundle": "dev-v1.2-dev",
+                "cleverage/permission-bundle": "1.0.*",
+                "cleverage/process-bundle": "2.0.*",
                 "friendsofsymfony/jsrouting-bundle": "~1.6",
                 "liip/imagine-bundle": "~1.7",
                 "php": ">=7.1",
-                "sidus/admin-bundle": "dev-v1.3-dev",
-                "sidus/datagrid-bundle": "dev-v1.4-dev",
-                "sidus/eav-bootstrap-bundle": "dev-v1.3-dev",
-                "sidus/eav-filter-bundle": "dev-v1.4-dev",
-                "sidus/eav-model-bundle": "dev-v1.2-dev",
-                "sidus/file-upload-bundle": "dev-v1.2.x-dev",
-                "sidus/filter-bundle": "dev-v1.4-dev",
+                "sidus/admin-bundle": "2.0.*",
+                "sidus/eav-bootstrap-bundle": "2.0.*",
+                "sidus/eav-filter-bundle": "2.0.*",
+                "sidus/eav-model-bundle": ">=1.2.21,<1.3",
+                "sidus/file-upload-bundle": "1.2.*",
                 "symfony/symfony": "~3.3|~4.0",
                 "thomaspark/bootswatch": "~3.3.7"
             },
@@ -123,20 +122,65 @@
                 "manager",
                 "model"
             ],
-            "time": "2018-08-16T17:00:07+00:00"
+            "time": "2018-10-04T10:16:41+00:00"
         },
         {
-            "name": "cleverage/process-bundle",
-            "version": "dev-v1.2-dev",
+            "name": "cleverage/permission-bundle",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cleverage/process-bundle.git",
-                "reference": "c7ea33f23f98382a46a312e7c6c3575d8047593f"
+                "url": "https://github.com/cleverage/permission-bundle.git",
+                "reference": "3005c4867224d8f2c6040bf7a22244c07c0fc6d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/process-bundle/zipball/c7ea33f23f98382a46a312e7c6c3575d8047593f",
-                "reference": "c7ea33f23f98382a46a312e7c6c3575d8047593f",
+                "url": "https://api.github.com/repos/cleverage/permission-bundle/zipball/3005c4867224d8f2c6040bf7a22244c07c0fc6d4",
+                "reference": "3005c4867224d8f2c6040bf7a22244c07c0fc6d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "sidus/base-bundle": "1.0.*",
+                "symfony/symfony": "^3.0|^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CleverAge\\PermissionBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Chalnot",
+                    "email": "vchalnot@clever-age.com",
+                    "homepage": "http://chalnot.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Attribute-level permissions based on roles for PHP classes",
+            "homepage": "https://github.com/cleverage/permission-bundle",
+            "keywords": [
+                "permissions",
+                "roles"
+            ],
+            "time": "2018-09-12T15:37:52+00:00"
+        },
+        {
+            "name": "cleverage/process-bundle",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleverage/process-bundle.git",
+                "reference": "98cb8991d90aa46e6f0d726be60529b36846ec5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleverage/process-bundle/zipball/98cb8991d90aa46e6f0d726be60529b36846ec5a",
+                "reference": "98cb8991d90aa46e6f0d726be60529b36846ec5a",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +235,7 @@
                 "task",
                 "transformation"
             ],
-            "time": "2018-08-10T14:26:47+00:00"
+            "time": "2018-09-25T13:13:49+00:00"
         },
         {
             "name": "components/jquery",
@@ -446,16 +490,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.7.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "b3217d58609e9c8e661cd41357a54d926c4a2a1a"
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/b3217d58609e9c8e661cd41357a54d926c4a2a1a",
-                "reference": "b3217d58609e9c8e661cd41357a54d926c4a2a1a",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
                 "shasum": ""
             },
             "require": {
@@ -466,8 +510,9 @@
             },
             "require-dev": {
                 "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^4.0",
                 "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "^7.0",
                 "predis/predis": "~1.0"
             },
             "suggest": {
@@ -476,7 +521,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -511,12 +556,12 @@
                 }
             ],
             "description": "Caching library offering an object-oriented API for many cache backends",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "cache",
                 "caching"
             ],
-            "time": "2017-08-25T07:02:50+00:00"
+            "time": "2018-08-21T18:01:43+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -1388,16 +1433,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "17896f6d56a2794a1619e019596ae627aabd8fd5"
+                "reference": "af1ec238659a83e320f03e0e454e200f689b4b97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/17896f6d56a2794a1619e019596ae627aabd8fd5",
-                "reference": "17896f6d56a2794a1619e019596ae627aabd8fd5",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/af1ec238659a83e320f03e0e454e200f689b4b97",
+                "reference": "af1ec238659a83e320f03e0e454e200f689b4b97",
                 "shasum": ""
             },
             "require": {
@@ -1462,7 +1507,7 @@
             "keywords": [
                 "persistence"
             ],
-            "time": "2018-06-14T18:57:48+00:00"
+            "time": "2018-07-12T12:37:50+00:00"
         },
         {
             "name": "doctrine/reflection",
@@ -1981,28 +2026,28 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.45",
+            "version": "1.0.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6"
+                "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
-                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a11e4a75f256bdacf99d20780ce42d3b8272975c",
+                "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c",
                 "shasum": ""
             },
             "require": {
+                "ext-fileinfo": "*",
                 "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "ext-fileinfo": "*",
                 "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^5.7.10"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -2061,7 +2106,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-05-07T08:44:23+00:00"
+            "time": "2018-09-14T15:30:29+00:00"
         },
         {
             "name": "liip/imagine-bundle",
@@ -2472,16 +2517,16 @@
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "2.2.0",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "81d53b2878f1d1c40ad27270e64b51798485dfc5"
+                "reference": "14b137b06b0f911944132df9d51e445a35920ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/81d53b2878f1d1c40ad27270e64b51798485dfc5",
-                "reference": "81d53b2878f1d1c40ad27270e64b51798485dfc5",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/14b137b06b0f911944132df9d51e445a35920ab1",
+                "reference": "14b137b06b0f911944132df9d51e445a35920ab1",
                 "shasum": ""
             },
             "require": {
@@ -2538,7 +2583,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "time": "2017-11-16T23:22:31+00:00"
+            "time": "2018-09-27T13:45:01+00:00"
         },
         {
             "name": "oneup/flysystem-bundle",
@@ -3320,22 +3365,22 @@
         },
         {
             "name": "sidus/admin-bundle",
-            "version": "dev-v1.3-dev",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusAdminBundle.git",
-                "reference": "94873ee342439823c19b2ae4e9d3ee74194d284f"
+                "reference": "40bd87c3e9b6a2ff01e643e49f46a9547bf79ad8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/94873ee342439823c19b2ae4e9d3ee74194d284f",
-                "reference": "94873ee342439823c19b2ae4e9d3ee74194d284f",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/40bd87c3e9b6a2ff01e643e49f46a9547bf79ad8",
+                "reference": "40bd87c3e9b6a2ff01e643e49f46a9547bf79ad8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
                 "sidus/base-bundle": "~1.0",
-                "sidus/datagrid-bundle": "dev-v1.3-dev|dev-v1.4-dev"
+                "sidus/datagrid-bundle": "2.0.*"
             },
             "type": "library",
             "autoload": {
@@ -3361,20 +3406,20 @@
                 "action",
                 "admin"
             ],
-            "time": "2018-08-06T15:17:18+00:00"
+            "time": "2018-10-04T10:05:17+00:00"
         },
         {
             "name": "sidus/base-bundle",
-            "version": "v1.0.4",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusBaseBundle.git",
-                "reference": "1e1a7a978e39829733c6ea7188016ef047a32b0d"
+                "reference": "00cfed5d385a31d7d87283d9ed2da5fca7797991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusBaseBundle/zipball/1e1a7a978e39829733c6ea7188016ef047a32b0d",
-                "reference": "1e1a7a978e39829733c6ea7188016ef047a32b0d",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusBaseBundle/zipball/00cfed5d385a31d7d87283d9ed2da5fca7797991",
+                "reference": "00cfed5d385a31d7d87283d9ed2da5fca7797991",
                 "shasum": ""
             },
             "require": {
@@ -3404,7 +3449,7 @@
                 "base",
                 "symfony"
             ],
-            "time": "2018-07-11T10:03:52+00:00"
+            "time": "2018-09-17T16:15:24+00:00"
         },
         {
             "name": "sidus/database-maintenance-bundle",
@@ -3456,21 +3501,21 @@
         },
         {
             "name": "sidus/datagrid-bundle",
-            "version": "dev-v1.4-dev",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusDataGridBundle.git",
-                "reference": "bbe631ef049148b52695eac13fcb6457af3c51a0"
+                "reference": "a87fa9b77720b67ddd881123aea349d3b373f1f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusDataGridBundle/zipball/bbe631ef049148b52695eac13fcb6457af3c51a0",
-                "reference": "bbe631ef049148b52695eac13fcb6457af3c51a0",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusDataGridBundle/zipball/a87fa9b77720b67ddd881123aea349d3b373f1f7",
+                "reference": "a87fa9b77720b67ddd881123aea349d3b373f1f7",
                 "shasum": ""
             },
             "require": {
                 "sidus/base-bundle": "~1.0",
-                "sidus/filter-bundle": "dev-v1.4-dev"
+                "sidus/filter-bundle": "2.0.*"
             },
             "type": "library",
             "autoload": {
@@ -3496,20 +3541,20 @@
                 "datagrid",
                 "sort"
             ],
-            "time": "2018-08-09T14:33:44+00:00"
+            "time": "2018-10-04T10:06:53+00:00"
         },
         {
             "name": "sidus/eav-bootstrap-bundle",
-            "version": "dev-v1.3-dev",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVBootstrapBundle.git",
-                "reference": "1faf749695254c89d9237e694d392f1923b4fba3"
+                "reference": "bdec5ce353c25d0cbb702286d31e835476850958"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/1faf749695254c89d9237e694d392f1923b4fba3",
-                "reference": "1faf749695254c89d9237e694d392f1923b4fba3",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/bdec5ce353c25d0cbb702286d31e835476850958",
+                "reference": "bdec5ce353c25d0cbb702286d31e835476850958",
                 "shasum": ""
             },
             "require": {
@@ -3519,7 +3564,7 @@
                 "mopa/bootstrap-bundle": "^3.0",
                 "pinano/select2-bundle": "^4.0",
                 "robloach/component-installer": "^0.2",
-                "sidus/eav-model-bundle": "dev-v1.2-dev",
+                "sidus/eav-model-bundle": ">=1.2.21,<1.3",
                 "stfalcon/tinymce-bundle": "2.1",
                 "twbs/bootstrap-sass": "^3.3.0"
             },
@@ -3547,25 +3592,25 @@
                 "bootstrap",
                 "eav"
             ],
-            "time": "2018-07-30T12:00:15+00:00"
+            "time": "2018-10-04T10:10:32+00:00"
         },
         {
             "name": "sidus/eav-filter-bundle",
-            "version": "dev-v1.4-dev",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVFilterBundle.git",
-                "reference": "7d428243f4bd6ce37ec7fc1555e476253cfb7139"
+                "reference": "d12d106a804d5770a9d264c3382f22525e2a0b03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/7d428243f4bd6ce37ec7fc1555e476253cfb7139",
-                "reference": "7d428243f4bd6ce37ec7fc1555e476253cfb7139",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/d12d106a804d5770a9d264c3382f22525e2a0b03",
+                "reference": "d12d106a804d5770a9d264c3382f22525e2a0b03",
                 "shasum": ""
             },
             "require": {
-                "sidus/eav-model-bundle": "dev-v1.2-dev",
-                "sidus/filter-bundle": "dev-v1.4-dev"
+                "sidus/eav-model-bundle": ">=1.2.21,<1.3",
+                "sidus/filter-bundle": "2.0.*"
             },
             "type": "library",
             "autoload": {
@@ -3594,20 +3639,20 @@
                 "filter",
                 "sort"
             ],
-            "time": "2018-08-08T15:48:33+00:00"
+            "time": "2018-10-04T10:13:35+00:00"
         },
         {
             "name": "sidus/eav-model-bundle",
-            "version": "dev-v1.2-dev",
+            "version": "v1.2.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "9af1052dec684d8a80417f063dc742380e838cc9"
+                "reference": "e6568496aeb37a3769f767c5daccd9af4bf33ef8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/9af1052dec684d8a80417f063dc742380e838cc9",
-                "reference": "9af1052dec684d8a80417f063dc742380e838cc9",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/e6568496aeb37a3769f767c5daccd9af4bf33ef8",
+                "reference": "e6568496aeb37a3769f767c5daccd9af4bf33ef8",
                 "shasum": ""
             },
             "require": {
@@ -3645,11 +3690,11 @@
                 "eav",
                 "model"
             ],
-            "time": "2018-07-26T09:40:03+00:00"
+            "time": "2018-10-04T09:46:08+00:00"
         },
         {
             "name": "sidus/file-upload-bundle",
-            "version": "dev-v1.2.x-dev",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFileUploadBundle.git",
@@ -3698,16 +3743,16 @@
         },
         {
             "name": "sidus/filter-bundle",
-            "version": "dev-v1.4-dev",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFilterBundle.git",
-                "reference": "de04c2eb37fc9b94bce68af891ca1f73fc2d39bd"
+                "reference": "12f2d66f7bee37eb85ff8fc854c06a1407318f16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusFilterBundle/zipball/de04c2eb37fc9b94bce68af891ca1f73fc2d39bd",
-                "reference": "de04c2eb37fc9b94bce68af891ca1f73fc2d39bd",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusFilterBundle/zipball/12f2d66f7bee37eb85ff8fc854c06a1407318f16",
+                "reference": "12f2d66f7bee37eb85ff8fc854c06a1407318f16",
                 "shasum": ""
             },
             "require": {
@@ -3747,7 +3792,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2018-08-08T14:54:52+00:00"
+            "time": "2018-09-26T15:12:58+00:00"
         },
         {
             "name": "stfalcon/tinymce-bundle",
@@ -4101,20 +4146,20 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.14",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "f50e17fa4edd6216f7fe5b908f04e64ba1d19a9e"
+                "reference": "de239d25e0bb3be451a17b627705a5970c6c59e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/f50e17fa4edd6216f7fe5b908f04e64ba1d19a9e",
-                "reference": "f50e17fa4edd6216f7fe5b908f04e64ba1d19a9e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/de239d25e0bb3be451a17b627705a5970c6c59e6",
+                "reference": "de239d25e0bb3be451a17b627705a5970c6c59e6",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "~2.4@stable",
+                "doctrine/common": "~2.4",
                 "ext-xml": "*",
                 "fig/link-util": "^1.0",
                 "php": "^5.5.9|>=7.0.8",
@@ -4202,7 +4247,7 @@
                 "doctrine/data-fixtures": "1.0.*",
                 "doctrine/dbal": "~2.4",
                 "doctrine/doctrine-bundle": "~1.4",
-                "doctrine/orm": "~2.4,>=2.4.5,<=2.7.0",
+                "doctrine/orm": "~2.4,>=2.4.5",
                 "egulias/email-validator": "~1.2,>=1.2.8|~2.0",
                 "monolog/monolog": "~1.11",
                 "ocramius/proxy-manager": "~0.4|~1.0|~2.0",
@@ -4252,7 +4297,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-08-01T14:48:04+00:00"
+            "time": "2018-10-03T12:03:55+00:00"
         },
         {
             "name": "thomaspark/bootswatch",
@@ -4480,16 +4525,16 @@
         },
         {
             "name": "white-october/pagerfanta-bundle",
-            "version": "v1.2.1",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
-                "reference": "3f97e71c9d3f75e7a6179aa82c863497bf298b2d"
+                "reference": "7aa8d797c46d46a3e950fbfa7e78de854658cb7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/3f97e71c9d3f75e7a6179aa82c863497bf298b2d",
-                "reference": "3f97e71c9d3f75e7a6179aa82c863497bf298b2d",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/7aa8d797c46d46a3e950fbfa7e78de854658cb7b",
+                "reference": "7aa8d797c46d46a3e950fbfa7e78de854658cb7b",
                 "shasum": ""
             },
             "require": {
@@ -4497,6 +4542,7 @@
                 "php": ">=5.3",
                 "symfony/framework-bundle": "~2.3|~3.0|~4.0",
                 "symfony/property-access": "~2.3|~3.0|~4.0",
+                "symfony/translation": "~2.3|~3.0|~4.0",
                 "symfony/twig-bundle": "~2.3|~3.0|~4.0"
             },
             "require-dev": {
@@ -4510,15 +4556,13 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "WhiteOctoberPagerfantaBundle.php"
-                ],
                 "psr-4": {
-                    "WhiteOctober\\PagerfantaBundle\\DependencyInjection\\": "DependencyInjection",
-                    "WhiteOctober\\PagerfantaBundle\\EventListener\\": "EventListener",
-                    "WhiteOctober\\PagerfantaBundle\\Twig\\": "Twig",
-                    "WhiteOctober\\PagerfantaBundle\\View\\": "View"
-                }
+                    "WhiteOctober\\PagerfantaBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "Tests/",
+                    "TestsProject/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4535,7 +4579,7 @@
                 "page",
                 "paging"
             ],
-            "time": "2018-06-20T09:32:42+00:00"
+            "time": "2018-10-02T13:23:39+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -4692,10 +4736,12 @@
             "conflict": {
                 "3f/pygmentize": "<1.2",
                 "adodb/adodb-php": "<5.20.12",
+                "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
                 "amphp/artax": "<1.0.6|>=2,<2.0.6",
                 "amphp/http": "<1.0.1",
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
+                "brightlocal/phpwhois": "<=4.2.5",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
                 "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=3.4,<3.4.14|>=3.5,<3.5.17|>=3.6,<3.6.4",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
@@ -4707,6 +4753,7 @@
                 "contao/core-bundle": ">=4,<4.4.18|>=4.5,<4.5.8",
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "contao/newsletter-bundle": ">=4,<4.1",
+                "david-garcia/phpwhois": "<=4.3.1",
                 "doctrine/annotations": ">=1,<1.2.7",
                 "doctrine/cache": ">=1,<1.3.2|>=1.4,<1.4.2",
                 "doctrine/common": ">=2,<2.4.3|>=2.5,<2.5.1",
@@ -4721,6 +4768,7 @@
                 "drupal/drupal": ">=7,<7.59|>=8,<8.4.8|>=8.5,<8.5.3",
                 "erusev/parsedown": "<1.7",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.3|>=5.4,<5.4.11.3|>=2017.8,<2017.8.1.1|>=2017.12,<2017.12.2.1",
+                "ezyang/htmlpurifier": "<4.1.1",
                 "firebase/php-jwt": "<2",
                 "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
                 "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
@@ -4732,7 +4780,11 @@
                 "illuminate/cookie": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "illuminate/database": ">=4,<4.0.99|>=4.1,<4.1.29",
                 "illuminate/encryption": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.40|>=5.6,<5.6.15",
+                "ivankristianto/phpwhois": "<=4.3",
+                "james-heinrich/getid3": "<1.9.9",
                 "joomla/session": "<1.3.1",
+                "jsmitty12/phpwhois": "<5.1",
+                "kazist/phpwhois": "<=4.2.6",
                 "kreait/firebase-php": ">=3.2,<3.8.1",
                 "laravel/framework": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
@@ -4742,6 +4794,7 @@
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
                 "onelogin/php-saml": "<2.10.4",
+                "openid/php-openid": "<2.3",
                 "oro/crm": ">=1.7,<1.7.4",
                 "oro/platform": ">=1.7,<1.7.4",
                 "padraic/humbug_get_contents": "<1.1.2",
@@ -4750,21 +4803,25 @@
                 "paypal/merchant-sdk-php": "<3.12",
                 "phpmailer/phpmailer": ">=5,<5.2.24",
                 "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
+                "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
                 "propel/propel": ">=2.0.0-alpha1,<=2.0.0-alpha7",
                 "propel/propel1": ">=1,<=1.7.1",
                 "pusher/pusher-php-server": "<2.2.1",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
                 "sensiolabs/connect": "<4.2.3",
+                "serluck/phpwhois": "<=4.2.6",
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/cms": ">=3,<=3.0.11|>=3.1,<3.1.11",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
                 "silverstripe/framework": ">=3,<3.3",
                 "silverstripe/userforms": "<3",
+                "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
                 "simplesamlphp/simplesamlphp": "<1.15.2",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "slim/slim": "<2.6",
+                "smarty/smarty": "<3.1.33",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
                 "stormpath/sdk": ">=0,<9.9.99",
@@ -4791,8 +4848,10 @@
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
+                "theonedemon/phpwhois": "<=4.2.5",
                 "titon/framework": ">=0,<9.9.99",
+                "truckersmp/phpwhois": "<=4.3.1",
                 "twig/twig": "<1.20",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.30|>=8,<8.7.17|>=9,<9.3.2",
                 "typo3/cms-core": ">=8,<8.7.17|>=9,<9.3.2",
@@ -4845,7 +4904,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-08-14T15:39:17+00:00"
+            "time": "2018-10-02T16:19:22+00:00"
         },
         {
             "name": "sensio/generator-bundle",
@@ -4945,16 +5004,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.14",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "4519412e6b503e3ca4ef43fb6a92b75fb5667824"
+                "reference": "76e013a98031356604e5a730c9eb22713dc4dda4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/4519412e6b503e3ca4ef43fb6a92b75fb5667824",
-                "reference": "4519412e6b503e3ca4ef43fb6a92b75fb5667824",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/76e013a98031356604e5a730c9eb22713dc4dda4",
+                "reference": "76e013a98031356604e5a730c9eb22713dc4dda4",
                 "shasum": ""
             },
             "require": {
@@ -5007,21 +5066,12 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:19:56+00:00"
+            "time": "2018-10-02T12:28:39+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cleverage/eav-manager": 20,
-        "sidus/eav-model-bundle": 20,
-        "sidus/eav-bootstrap-bundle": 20,
-        "sidus/filter-bundle": 20,
-        "sidus/eav-filter-bundle": 20,
-        "sidus/datagrid-bundle": 20,
-        "sidus/file-upload-bundle": 20,
-        "sidus/admin-bundle": 20,
-        "cleverage/process-bundle": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

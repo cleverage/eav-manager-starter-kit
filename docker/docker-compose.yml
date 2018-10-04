@@ -49,3 +49,12 @@ services:
         image: zolweb/docker-mailcatcher:latest
         ports:
             - ${MAILCATCHER_PORT}:1080
+
+    deploy:
+        build: capistrano
+        command: /bin/true
+        volumes:
+            - ${APP_DIR}/deploy:/source
+            - ${SSH_AUTH_SOCK}:/ssh-agent
+        environment:
+            SSH_AUTH_SOCK: '/ssh-agent'
