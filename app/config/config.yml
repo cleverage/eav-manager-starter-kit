@@ -1,9 +1,9 @@
 imports:
     - { resource: parameters.yml }
     - { resource: parameters/* }
-    - { resource: application/* }
-
     - { resource: '@CleverAgeEAVManagerAdminBundle/Resources/config/base_config.yml' }
+
+    - { resource: application/* }
     - { resource: admin/* }
     - { resource: datagrid/* }
     - { resource: model/* }

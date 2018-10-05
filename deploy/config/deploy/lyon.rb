@@ -3,7 +3,7 @@ server "lyon.clever-age.net",
   user: "eavmanager",
   port: 22021
 
-set :branch, "v1.4-dev"
+set :branch, "master"
 set :deploy_to, "/home/eavmanager/www"
 
 namespace :phpfpm do
