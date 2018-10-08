@@ -13,6 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  *     @ORM\Index(name="position", columns={"position"})
  * })
  * @ORM\Entity(repositoryClass="Sidus\EAVModelBundle\Entity\ValueRepository")
+ * @ORM\ChangeTrackingPolicy("DEFERRED_EXPLICIT")
  */
 class Value extends AbstractValue
 {

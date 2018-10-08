@@ -58,16 +58,16 @@
         },
         {
             "name": "cleverage/eav-manager",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/eav-manager.git",
-                "reference": "5b2048e1939d78cfac4c6990f92939c396c7a51c"
+                "reference": "8c76aff06fdb923d086696a596069ea72a4b3a56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/5b2048e1939d78cfac4c6990f92939c396c7a51c",
-                "reference": "5b2048e1939d78cfac4c6990f92939c396c7a51c",
+                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/8c76aff06fdb923d086696a596069ea72a4b3a56",
+                "reference": "8c76aff06fdb923d086696a596069ea72a4b3a56",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 "manager",
                 "model"
             ],
-            "time": "2018-10-04T10:16:41+00:00"
+            "time": "2018-10-05T09:13:44+00:00"
         },
         {
             "name": "cleverage/permission-bundle",
@@ -4808,6 +4808,7 @@
                 "propel/propel": ">=2.0.0-alpha1,<=2.0.0-alpha7",
                 "propel/propel1": ">=1,<=1.7.1",
                 "pusher/pusher-php-server": "<2.2.1",
+                "robrichards/xmlseclibs": ">=1,<3.0.2",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
@@ -4848,7 +4849,7 @@
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
+                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
                 "theonedemon/phpwhois": "<=4.2.5",
                 "titon/framework": ">=0,<9.9.99",
                 "truckersmp/phpwhois": "<=4.3.1",
@@ -4904,7 +4905,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-10-02T16:19:22+00:00"
+            "time": "2018-10-05T18:14:02+00:00"
         },
         {
             "name": "sensio/generator-bundle",

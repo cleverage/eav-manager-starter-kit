@@ -1,21 +1,24 @@
 sidus_admin:
     configurations:
         publication:
-            controller: '%eav.controller%'
+            # This option defines the
+            controller_pattern:
+                - 'CleverAge\EAVManager\AdminBundle\Action\EAV\{{Action}}Action'
+            template_pattern:
+                - '@CleverAgeEAVManagerAdmin/EAVData/{{action}}.{{format}}.twig'
+                - '@CleverAgeEAVManagerAdmin/Base/{{action}}.{{format}}.twig'
             entity: '%sidus_data_class%'
             prefix: /publication
+            form_type: '%eav_form.type%'
             actions:
                 list:
                     path:     /{familyCode}/list
                 create:
                     path:     /{familyCode}/create
-                    form_type: '%eav_form.type%'
                 read:
                     path:     /{familyCode}/read/{id}
-                    form_type: '%eav_form.type%'
                 edit:
                     path:     /{familyCode}/edit/{id}
-                    form_type: '%eav_form.type%'
                 delete:
                     path:     /{familyCode}/delete/{id}
             options:
