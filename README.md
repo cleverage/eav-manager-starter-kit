@@ -3,6 +3,16 @@ CleverAge/EAVManager Starter Kit
 
 The main documentation is located here: [CleverAge/EAVManager](https://github.com/cleverage/eav-manager)
 
+## Requirements
+### For GNU / Linux
+
+* Docker (last version)
+* make
+
+### Additional stuff For MacOS X
+
+* Docker-Sync
+
 ## Installation
 
 You will need make, docker and docker-compose installed on your machine.

@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  fpm:
+    volumes:
+    - "eav-manager-native-osx-sync:/app:nocopy"
+
+  nginx:
+    volumes:
+    - "eav-manager-native-osx-sync:/app:nocopy"
+
+volumes:
+  eav-manager-native-osx-sync:
+    external: true
