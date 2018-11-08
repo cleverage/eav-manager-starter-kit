@@ -26,10 +26,7 @@
 
 /docker/data/*
 !docker/data/.gitkeep
-/docker/ssh/*
-!docker/ssh/.gitkeep
-/docker/.env
-/docker/docker-compose-override.yml
+/docker-compose.override.yml
 
 /app/data/*
 !/app/data/.gitkeep

@@ -97,9 +97,7 @@
                 "mailer_transport": "SF_MAILER_TRANSPORT",
                 "mailer_host": "SF_MAILER_HOST",
                 "mailer_user": "SF_MAILER_USER",
-                "mailer_password": "SF_MAILER_PASSWORD",
-                "secret": "SF_SECRET",
-                "trusted_proxies": "SF_TRUSTED_PROXIES"
+                "mailer_password": "SF_MAILER_PASSWORD"
             }
         }
     }
