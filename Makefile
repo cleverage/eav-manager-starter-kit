@@ -26,9 +26,11 @@ endif
 
 .PHONY: stop
 stop: .env docker-compose.override.yml ## Stop docker-compose (with Docker-Sync if you work on Mac Os X)
+ifneq ($(RUNNING),)
 	docker-compose down --remove-orphans
 ifeq ($(OS),Darwin)
 	docker-sync stop
+endif
 endif
 
 .PHONY: sf
