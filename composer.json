@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "App\\": "src/App"
         },
         "classmap": [
             "app/AppKernel.php",
@@ -35,6 +35,8 @@
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
+        "dealerdirect/phpcodesniffer-composer-installer": "0.4.*",
+        "escapestudios/symfony2-coding-standard": "3.4.*",
         "sidus/doctrine-debug-bundle": "1.*",
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^4.1",

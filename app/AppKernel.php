@@ -23,7 +23,7 @@ class AppKernel extends Kernel
         $eavBundles = CleverAge\EAVManager\EAVKernelBundleLoader::getBundles();
 
         $projectBundles = [
-            new ClientNamespace\EAVModelBundle\ClientNamespaceEAVModelBundle(),
+            // Add any additional project bundle here
         ];
 
         $devBundles = [];

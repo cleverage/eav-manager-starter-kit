@@ -1,12 +1,12 @@
 <?php
 
-namespace ClientNamespace\EAVModelBundle\Entity;
+namespace App\Entity;
 
 use CleverAge\EAVManager\EAVModelBundle\Entity\AbstractData;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Table(name="client_data", indexes={
+ * @ORM\Table(name="app_eav_data", indexes={
  *     @ORM\Index(name="family", columns={"family_code"}),
  *     @ORM\Index(name="updated_at", columns={"updated_at"}),
  *     @ORM\Index(name="created_at", columns={"created_at"})
