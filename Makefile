@@ -33,6 +33,10 @@ ifeq ($(OS),Darwin)
 endif
 endif
 
+.PHONY: cc
+cc: ## [symfony] brutal cache clearer (useless on linux / useless with macOs)
+	docker-compose exec fpm ash -c "rm -rf var/cache/*"
+
 .PHONY: sf
 sf: ## [symfony] entrypoint for a Symfony Command (exemple: make sf CMD=cache:clear)
 	docker-compose exec fpm php bin/console $(CMD)
@@ -60,8 +64,12 @@ create-admin: start
 	read -p "Admin user password: " EAV_ADMIN_PASSWORD && \
 	$(MAKE) sf CMD="eavmanager:create-user $${EAV_ADMIN_USERNAME} --admin --password=$${EAV_ADMIN_PASSWORD} --no-interaction"
 
+.PHONY: sf-doctrine-create
+sf-doctrine-create: ## [doctrine] database create
+	@$(MAKE) sf CMD='doctrine:database:create --if-not-exists'
+
 .PHONY: clean
-clean: stop
+clean: stop ## [project] clean your dev environnement of all artefacts (docker containers and associated volumes, vendor, docker-sync volumes)
 	docker-compose down -v
 ifeq ($(OS),Darwin)
 	docker-sync clean
@@ -72,3 +80,9 @@ endif
 reset: clean
 	rm -f app/config/parameters.yml
 	rm -rf var/cache/* var/data/* var/annotations var/logs/* var/sessions/*
+
+.PHONY: logs
+logs: ## [docker] show docker logs (you can specify a container with C='fpm')
+	docker-compose logs $(C)
+
+

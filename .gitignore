@@ -24,8 +24,6 @@
 /web/js/
 /web/images/cache/
 
-/docker/data/*
-!docker/data/.gitkeep
 /docker-compose.override.yml
 
 /app/data/*
@@ -33,3 +31,4 @@
 
 !.gitkeep
 .docker-sync/
+
