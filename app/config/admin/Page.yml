@@ -12,15 +12,15 @@ sidus_admin:
             form_type: '%eav_form.type%'
             actions:
                 list:
-                    path:     /{familyCode}/list
+                    path: /{familyCode}/list
                 create:
-                    path:     /{familyCode}/create
+                    path: /{familyCode}/create
                 read:
-                    path:     /{familyCode}/read/{id}
+                    path: /{familyCode}/read/{id}
                 edit:
-                    path:     /{familyCode}/edit/{id}
+                    path: /{familyCode}/edit/{id}
                 delete:
-                    path:     /{familyCode}/delete/{id}
+                    path: /{familyCode}/delete/{id}
             options:
                 icon: database
                 families:

@@ -23,3 +23,5 @@ framework:
     assets: ~
     php_errors:
         log: true
+    property_access:
+        throw_exception_on_invalid_index: '%kernel.debug%'

@@ -2,7 +2,7 @@ DC ?= cd docker && docker-compose
 
 .PHONY: help
 help: ## This help
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(TARGETS) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@grep -Eh '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 -include docker/.env
 docker/.env:
@@ -22,7 +22,7 @@ stop: ## Stop and destroy docker images
 
 .PHONY: shell
 shell: start ## Deploy to staging
-	$(DC) exec www zsh -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec zsh"
+	$(DC) exec www zsh
 
 .PHONY: docker-status
 docker-status: ## Diplay containers status

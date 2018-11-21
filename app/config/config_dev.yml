@@ -14,30 +14,24 @@ web_profiler:
 
 monolog:
     handlers:
-        main:
+        fingers_crossed:
             type: fingers_crossed
             action_level: warning
-            handler: group
-            channels: ['!translation', '!event']
-        group:
-            type: group
-            members:
-                - file
-                - process
+            handler: file
+            channels: ['!cleverage_process_task', '!cleverage_process', '!translation', '!event']
         file:
             type: rotating_file
             path: '%kernel.logs_dir%/%kernel.environment%.log'
-            max_files: 10
+            max_files: 5
             level: debug
             formatter: monolog.formatter.standard
-            channels: ['!cleverage_process_task']
         process:
             type: rotating_file
             path: '%kernel.logs_dir%/process/%kernel.environment%.log'
             max_files: 5
-            level: debug
+            level: info
             formatter: monolog.formatter.standard
-            channels: ['cleverage_process_task']
+            channels: ['cleverage_process_task', 'cleverage_process']
         console:
             type: console
             channels: ['!event', '!doctrine', '!cache', '!translation']

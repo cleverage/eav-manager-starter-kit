@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="CleverAge">
+    <description>The CleverAge coding standard.</description>
+    <rule ref="Symfony">
+        <exclude name="Symfony.Functions.Arguments.Invalid"/>
+        <exclude name="Symfony.Commenting.License.Warning"/>
+    </rule>
+</ruleset>

@@ -35,11 +35,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 COPY start.sh /var/www/start.sh
 
-# DEV only - install PHPUnit
-RUN wget https://phar.phpunit.de/phpunit-6.4.phar
-RUN chmod +x phpunit-6.4.phar
-RUN mv phpunit-6.4.phar /usr/local/bin/phpunit
-
 # Rollback default shell
 USER www-data
 

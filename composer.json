@@ -17,6 +17,7 @@
         "ext-xml": "*",
         "ext-zip": "*",
         "ext-gd": "*",
+        "ext-json": "*",
 
         "symfony/symfony": "3.4.*",
         "incenteev/composer-parameter-handler": "^2.0",
