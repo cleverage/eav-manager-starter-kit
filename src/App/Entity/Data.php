@@ -18,4 +18,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Data extends AbstractData
 {
+    /**
+     * @var int
+     *
+     * @ORM\Id
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
 }

@@ -17,4 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Value extends AbstractValue
 {
+    /**
+     * @var int
+     *
+     * @ORM\Id
+     * @ORM\Column(name="id", type="bigint")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
 }
