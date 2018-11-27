@@ -1,3 +1,4 @@
-clever_age_process:
-    # This should be the default configuration for the process bundle
-    default_error_strategy: stop
+# @todo Uncomment this when we release the new version of the process-bundle
+#clever_age_process:
+#    # This should be the default configuration for the process bundle
+#    default_error_strategy: stop

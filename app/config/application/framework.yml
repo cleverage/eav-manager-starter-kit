@@ -23,5 +23,6 @@ framework:
     assets: ~
     php_errors:
         log: true
-    property_access:
-        throw_exception_on_invalid_index: '%kernel.debug%'
+# @todo uncomment when https://github.com/symfony/symfony/issues/29354 is resolved
+#    property_access:
+#        throw_exception_on_invalid_index: '%kernel.debug%'
