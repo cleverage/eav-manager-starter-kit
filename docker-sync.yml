@@ -1,8 +1,0 @@
-version: "2"
-options:
-    verbose: true
-syncs:
-    eav-manager-native-osx-sync:
-        sync_userid: '1000'
-        src: './'
-        sync_excludes: ['.git', '.gitignore', '.DS_Store', '.idea', 'docker', 'docker-sync.yml', 'docker-compose.yml', 'docker-compose-dev.yml', 'gulpfile.js', 'package.json', 'var/logs/*', 'var/cache/*']

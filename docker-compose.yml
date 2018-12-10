@@ -1,7 +1,10 @@
 version: "3.4"
 services:
     fpm:
-        image: cleverage/eav-manager:php7.2-dev
+        build:
+            context: .
+            args:
+              SYMFONY_ENV: dev
         environment:
             INIT_COMPOSER_INSTALL: 1
             INIT_XDEBUG_ACTIVATED: 0
@@ -17,8 +20,8 @@ services:
             - mysql
             - mailcatcher
         volumes:
-            - ./:/app:delegated
-            - composer-home:/home/docker/.composer
+            - ./:/app
+            - $HOME/.composer:/home/docker/.composer
 
     mysql:
         image: mysql:5.7
@@ -32,6 +35,8 @@ services:
 
     nginx:
         image: nginx:stable-alpine
+        environment:
+            PHP_IDE_CONFIG: 'serverName=cdm'
         volumes:
             - ./docker/nginx/eav.conf:/etc/nginx/conf.d/default.conf
             - ./:/app
@@ -56,6 +61,4 @@ services:
 
 volumes:
     eav-manager-mysql-data:
-        driver: local
-    composer-home:
         driver: local

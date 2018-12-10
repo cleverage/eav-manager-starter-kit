@@ -15,12 +15,13 @@ ifeq ($(OS),Darwin)
 	cp docker-compose.macos.yml.dist docker-compose.override.yml
 endif
 
+.PHONY: build
+build: ## Build Project container
+	docker-compose build fpm
+
 .PHONY: start
 start: .env docker-compose.override.yml ## Start docker-compose (with Docker-Sync if you work on Mac Os X)
 ifeq ($(RUNNING),)
-ifeq ($(OS),Darwin)
-	docker-sync start
-endif
 	docker-compose up -d
 endif
 
@@ -28,9 +29,6 @@ endif
 stop: .env docker-compose.override.yml ## Stop docker-compose (with Docker-Sync if you work on Mac Os X)
 ifneq ($(RUNNING),)
 	docker-compose down --remove-orphans
-ifeq ($(OS),Darwin)
-	docker-sync stop
-endif
 endif
 
 .PHONY: cc
@@ -46,7 +44,7 @@ shell: ## [shell] connection to php container php
 	docker-compose exec fpm zsh
 
 .PHONY: install
-install: start  ## Run Docker // Install application
+install: build start getvendor  ## Run Docker // Install application
 	@read -p 'WARNING, if you press ENTER the database will be destroyed' FUBAR
 	@echo 'Droping schema...'
 	@$(MAKE) sf CMD='doctrine:schema:drop --force --no-interaction --quiet'
@@ -56,13 +54,14 @@ install: start  ## Run Docker // Install application
 	$(MAKE) create-admin
 
 .PHONY: shell
-shell: start ## Deploy to staging
-	$(DC) exec www zsh
+shell: start ## shell
+	docker-compose exec fpm zsh
 
 create-admin: start
 	@read -p "Admin user email: " EAV_ADMIN_USERNAME && \
 	read -p "Admin user password: " EAV_ADMIN_PASSWORD && \
 	$(MAKE) sf CMD="eavmanager:create-user $${EAV_ADMIN_USERNAME} --admin --password=$${EAV_ADMIN_PASSWORD} --no-interaction"
+
 
 .PHONY: sf-doctrine-create
 sf-doctrine-create: ## [doctrine] database create
@@ -71,10 +70,13 @@ sf-doctrine-create: ## [doctrine] database create
 .PHONY: clean
 clean: stop ## [project] clean your dev environnement of all artefacts (docker containers and associated volumes, vendor, docker-sync volumes)
 	docker-compose down -v
-ifeq ($(OS),Darwin)
-	docker-sync clean
-endif
 	rm -rf vendor/
+
+.PHONY: getvendor
+getvendor: ## copy vendor (only for MacOS)
+ifeq ($(OS),Darwin)
+	docker cp $(shell docker ps --filter "name=$(COMPOSE_PROJECT_NAME)_fpm" --format "{{.Names}}"):/app/vendor .
+endif
 
 .PHONY: reset
 reset: clean
