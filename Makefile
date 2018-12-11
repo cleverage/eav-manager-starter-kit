@@ -15,14 +15,10 @@ ifeq ($(OS),Darwin)
 	cp docker-compose.macos.yml.dist docker-compose.override.yml
 endif
 
-.PHONY: build
-build: ## Build Project container
-	docker-compose build fpm
-
 .PHONY: start
 start: .env docker-compose.override.yml ## Start docker-compose (with Docker-Sync if you work on Mac Os X)
 ifeq ($(RUNNING),)
-	docker-compose up -d
+	docker-compose up -d --build
 endif
 
 .PHONY: stop
@@ -44,7 +40,7 @@ shell: ## [shell] connection to php container php
 	docker-compose exec fpm zsh
 
 .PHONY: install
-install: build start getvendor  ## Run Docker // Install application
+install: start getvendor  ## Run Docker // Install application
 	@read -p 'WARNING, if you press ENTER the database will be destroyed' FUBAR
 	@echo 'Droping schema...'
 	@$(MAKE) sf CMD='doctrine:schema:drop --force --no-interaction --quiet'
@@ -52,10 +48,6 @@ install: build start getvendor  ## Run Docker // Install application
 	@$(MAKE) sf CMD='doctrine:schema:create --no-interaction --quiet'
 	@echo 'Please create admin user credentials:'
 	$(MAKE) create-admin
-
-.PHONY: shell
-shell: start ## shell
-	docker-compose exec fpm zsh
 
 create-admin: start
 	@read -p "Admin user email: " EAV_ADMIN_USERNAME && \
