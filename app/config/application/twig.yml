@@ -3,5 +3,13 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     form_themes:
-        - SidusDataGridBundle:Form:fields.html.twig
+        - SidusDataGridBundle:Form:bootstrap3.html.twig
         - CleverAgeEAVManagerLayoutBundle:Form:form.fields.html.twig
+    date:
+        format: d/m/Y, H:i
+        interval_format: '%%d jours'
+        timezone: Europe/Paris
+    number_format:
+        decimals: 2
+        decimal_point: ','
+        thousands_separator: ' '
