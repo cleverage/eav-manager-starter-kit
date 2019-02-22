@@ -31,8 +31,21 @@
         "tinymce/tinymce": "4.5.*",
         "doctrine/doctrine-migrations-bundle": "^1.2",
         "sidus/database-maintenance-bundle": "1.0.*",
+        "enqueue/enqueue-bundle": "0.8.*",
+        "enqueue/amqp-bunny": "0.8.*",
+        "sidus/elastica-filter-bundle": "dev-v2.0-dev",
+        "cleverage/enqueue-process-bundle": "dev-v2.0-dev",
+        "api-platform/api-platform": "2.1.*",
 
-        "cleverage/eav-manager": "2.1.*"
+        "sidus/eav-model-bundle": "dev-v1.3-dev",
+        "sidus/file-upload-bundle": "dev-v1.2-dev",
+        "cleverage/eav-manager": "dev-v2.1-dev",
+        "sidus/eav-bootstrap-bundle": "dev-v2.1-dev",
+        "sidus/filter-bundle": "dev-v2.0-dev",
+        "sidus/eav-filter-bundle": "dev-v2.1-dev",
+        "sidus/datagrid-bundle": "dev-v2.0-dev",
+        "sidus/admin-bundle": "dev-v2.0-dev",
+        "cleverage/process-bundle": "dev-v2.0-dev"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
@@ -99,7 +112,14 @@
                 "mailer_user": "SF_MAILER_USER",
                 "mailer_password": "SF_MAILER_PASSWORD",
                 "secret": "SF_SECRET",
-                "trusted_proxies": "SF_TRUSTED_PROXIES"
+                "trusted_proxies": "SF_TRUSTED_PROXIES",
+                "elastic_search.host": "SF_ELASTIC_SEARCH_HOST",
+                "elastic_search.port": "SF_ELASTIC_SEARCH_PORT",
+                "elastic_search.password": "SF_ELASTIC_SEARCH_PASSWORD",
+                "rabbitmq.host": "SF_RABBITMQ_HOST",
+                "rabbitmq.port": "SF_RABBITMQ_PORT",
+                "rabbitmq.user": "SF_RABBITMQ_USER",
+                "rabbitmq.pass": "SF_RABBITMQ_PASS"
             }
         }
     }

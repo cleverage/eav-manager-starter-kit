@@ -1,6 +1,6 @@
 sidus_admin:
     configurations:
-        publication:
+        Edition:
             # This option defines the
             controller_pattern:
                 - 'CleverAge\EAVManager\AdminBundle\Action\EAV\{{Action}}Action'
@@ -8,7 +8,7 @@ sidus_admin:
                 - '@CleverAgeEAVManagerAdmin/EAVData/{{action}}.{{format}}.twig'
                 - '@CleverAgeEAVManagerAdmin/Base/{{action}}.{{format}}.twig'
             entity: '%sidus_data_class%'
-            prefix: /publication
+            prefix: /edition
             form_type: '%eav_form.type%'
             actions:
                 list:
@@ -24,4 +24,4 @@ sidus_admin:
             options:
                 icon: database
                 families:
-                    Page: ~
+                    Edition: ~

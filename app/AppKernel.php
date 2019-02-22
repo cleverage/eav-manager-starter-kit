@@ -23,6 +23,12 @@ class AppKernel extends Kernel
         $eavBundles = CleverAge\EAVManager\EAVKernelBundleLoader::getBundles();
 
         $projectBundles = [
+            new Sidus\DatabaseMaintenanceBundle\SidusDatabaseMaintenanceBundle(),
+            new FOS\ElasticaBundle\FOSElasticaBundle(),
+            new Enqueue\Bundle\EnqueueBundle(),
+            new Sidus\ElasticaFilterBundle\SidusElasticaFilterBundle(),
+            new CleverAge\EnqueueProcessBundle\CleverAgeEnqueueProcessBundle(),
+            new ApiPlatform\Core\Bridge\Symfony\Bundle\ApiPlatformBundle(),
             // Add any additional project bundle here
         ];
 

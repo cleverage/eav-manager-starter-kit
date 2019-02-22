@@ -1,0 +1,38 @@
+sidus_eav_model:
+    families:
+        Author:
+            data_class: App\Entity\Author
+            attributeAsLabel: name
+            attributeAsIdentifier: olCode
+            attributes:
+                olCode:
+                    type: string_identifier
+                viafCode:
+                    unique: true
+                wikidataCode:
+                    unique: true
+                isniCode:
+                    unique: true
+                name:
+                    required: true
+                title: ~
+                personalName: ~
+                fullerName: ~
+                alternateNames:
+                    multiple: true
+                period: ~
+                birthYear:
+                    type: integer
+                deathYear:
+                    type: integer
+                biography:
+                    type: text
+                links:
+                    type: embed
+                    multiple: true
+                    options:
+                        allowed_families:
+                            - AuthorLink
+                website: ~
+                location: ~
+                wikipedia: ~

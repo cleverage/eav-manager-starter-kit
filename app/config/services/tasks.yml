@@ -1,0 +1,6 @@
+services:
+    # Tasks needs to be public
+    App\Task\:
+        resource: '../../../src/App/Task/*'
+        autowire: true
+        public: true

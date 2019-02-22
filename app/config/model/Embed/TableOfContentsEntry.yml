@@ -1,0 +1,12 @@
+sidus_eav_model:
+    families:
+        TableOfContentsEntry:
+            attributeAsLabel: title
+            attributes:
+                title:
+                    required: true
+                label: ~
+                level:
+                    type: integer
+                pageNumber:
+                    type: integer

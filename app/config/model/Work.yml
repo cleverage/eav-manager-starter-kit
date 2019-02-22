@@ -1,0 +1,11 @@
+sidus_eav_model:
+    families:
+        Work:
+            data_class: App\Entity\Work
+            attributeAsLabel: name
+            attributeAsIdentifier: olCode
+            attributes:
+                olCode:
+                    type: string_identifier
+                name:
+                    required: true

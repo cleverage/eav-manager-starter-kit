@@ -7,11 +7,13 @@ services:
         depends_on:
             - mysql
             - mailcatcher
+            - rabbitmq
         ports:
             - ${WWW_PORT}:80
         volumes:
             - ${APP_DIR}:/var/www/current
             - ./www/nginx/sites-available/:/etc/nginx/sites-available/
+            - ./www/supervisor/:/etc/supervisor/conf.d/
             - ${SSH_AUTH_SOCK}:/ssh-agent
         environment:
             SF_DATABASE_HOST: mysql
@@ -24,6 +26,13 @@ services:
             SF_MAILER_USER: '~'
             SF_MAILER_PASSWORD: '~'
             SF_SECRET: ${SF_SECRET}
+            SF_RABBITMQ_HOST: rabbitmq
+            SF_RABBITMQ_PORT: 5672
+            SF_RABBITMQ_USER: rb_user
+            SF_RABBITMQ_PASS: rb_passwd
+            SF_ELASTIC_SEARCH_HOST: elasticsearch
+            SF_ELASTIC_SEARCH_PORT: 9200
+            SF_ELASTIC_SEARCH_PASSWORD: elasticsearch
             SF_TRUSTED_PROXIES: '~'
 
     mysql:
@@ -52,6 +61,28 @@ services:
         environment:
             SSH_AUTH_SOCK: '/ssh-agent'
 
+    elasticsearch:
+        image:  docker.elastic.co/elasticsearch/elasticsearch:6.5.0
+        environment:
+            discovery.type: single-node
+            ELASTIC_PASSWORD: elasticsearch
+        volumes:
+            - volume_elasticsearch:/usr/share/elasticsearch/data
+
+    rabbitmq:
+        image: rabbitmq:3.7-management
+        environment:
+            RABBITMQ_DEFAULT_USER: rb_user
+            RABBITMQ_DEFAULT_PASS: rb_passwd
+        ports:
+            - 15672:15672
+        volumes:
+            - volume_rabbitmq:/var/lib/rabbitmq
+
 volumes:
+    volume_rabbitmq:
+        driver: local
     volume_mysql:
+        driver: local
+    volume_elasticsearch:
         driver: local

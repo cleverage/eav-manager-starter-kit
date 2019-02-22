@@ -1,0 +1,11 @@
+enqueue:
+    transport:
+        default:
+            alias: amqp
+        amqp:
+            driver: bunny
+            host: '%rabbitmq.host%'
+            port: '%rabbitmq.port%'
+            user: '%rabbitmq.user%'
+            pass: '%rabbitmq.pass%'
+    client: ~

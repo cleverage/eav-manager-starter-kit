@@ -1,3 +1,7 @@
 clever_age_process:
-    # This will become the new default configuration for the process bundle
     default_error_strategy: stop
+
+clever_age_enqueue_process:
+    topics:
+        import.denormalize_eav:
+            process: import.denormalize_eav

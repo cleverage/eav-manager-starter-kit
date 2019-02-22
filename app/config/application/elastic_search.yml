@@ -1,0 +1,16 @@
+fos_elastica:
+    clients:
+        default:
+            host: '%elastic_search.host%'
+            port: '%elastic_search.port%'
+            username: elastic
+            password: '%elastic_search.password%'
+
+parameters:
+    # Used for index maintenance in processes only
+    # /!\ Warning it uses the index, NOT the finder!
+    elasticsearch.entity_mapping:
+        author:
+            entity: App\Entity\Author
+            indexName: author
+            typeName: datagrid

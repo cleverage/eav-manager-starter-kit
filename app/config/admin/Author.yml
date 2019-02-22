@@ -1,0 +1,27 @@
+sidus_admin:
+    configurations:
+        Author:
+            # This option defines the
+            controller_pattern:
+                - 'CleverAge\EAVManager\AdminBundle\Action\EAV\{{Action}}Action'
+            template_pattern:
+                - '@CleverAgeEAVManagerAdmin/EAVData/{{action}}.{{format}}.twig'
+                - '@CleverAgeEAVManagerAdmin/Base/{{action}}.{{format}}.twig'
+            entity: '%sidus_data_class%'
+            prefix: /author
+            form_type: '%eav_form.type%'
+            actions:
+                list:
+                    path: /{familyCode}/list
+                create:
+                    path: /{familyCode}/create
+                read:
+                    path: /{familyCode}/read/{id}
+                edit:
+                    path: /{familyCode}/edit/{id}
+                delete:
+                    path: /{familyCode}/delete/{id}
+            options:
+                icon: database
+                families:
+                    Author: ~

@@ -1,0 +1,473 @@
+clever_age_process:
+    configurations:
+        import.ol:
+            entry_point: stream_input
+            tasks:
+                stream_input:
+                    service: '@CleverAge\ProcessBundle\Task\File\Csv\CsvReaderTask'
+                    options:
+                        file_path: 'php://stdin'
+                        delimiter: "\t"
+                        headers:
+                            - type
+                            - slug
+                            - number
+                            - datetime
+                            - json
+                    outputs: [stats, mapping]
+
+                mapping:
+                    service: '@CleverAge\ProcessBundle\Task\TransformerTask'
+                    error_strategy: skip
+                    options:
+                        transformers:
+                            mapping:
+                                mapping:
+                                    family:
+                                        code: '[type]'
+                                        transformers:
+                                            convert_value:
+                                                map:
+                                                    /type/page: ~
+                                                    /type/author: Author
+                                                    /type/redirect: ~
+                                                    /type/delete: ~
+                                                    /type/edition: Edition
+                                                    /type/rawtext: ~
+                                                    /type/i18n: ~
+                                                    /type/language: Language
+                                                    /type/library: Library
+                                                    /type/subject: Subject
+                                                    /type/work: Work
+                                                    /type/template: ~
+                                                    /type/macro: ~
+                                                    /type/usergroup: ~
+                                                    /type/home: ~
+                                                    /type/datetime: ~
+                                                    /type/type: ~
+                                                    /type/volume: ~
+                                                    /type/i18n_text: ~
+                                                    /type/scan_location: ~
+                                    olCode:
+                                        code: '[slug]'
+                                        transformers:
+                                            explode:
+                                                delimiter: '/'
+                                            property_accessor:
+                                                property_path: '[2]'
+                                    model:
+                                        code: '[json]'
+                                        transformers:
+                                            callback:
+                                                callback: json_decode
+                                                additional_parameters:
+                                                    - true
+                    outputs: [filter_author, filter_edition]
+                    errors: [debug]
+
+                filter_author:
+                    service: '@CleverAge\ProcessBundle\Task\FilterTask'
+                    options:
+                        match:
+                            '[family]': Author
+                        not_match:
+                            '[olCode]': OL7413012A
+                    outputs: [author_mapping]
+
+                filter_edition:
+                    service: '@CleverAge\ProcessBundle\Task\FilterTask'
+                    options:
+                        match:
+                            '[family]': Edition
+                    outputs: [check_model_keys, edition_mapping]
+
+                check_model_keys:
+                    service: '@App\Task\CheckModelColumnsTask'
+
+                author_mapping:
+                    service: '@CleverAge\ProcessBundle\Task\TransformerTask'
+                    error_strategy: skip
+                    options:
+                        transformers:
+                            mapping:
+                                mapping:
+                                    family:
+                                        code: '[family]'
+                                    olCode:
+                                        code: '[olCode]'
+                                    name:
+                                        code: '[model][name]'
+                                        transformers:
+                                            trim: ~
+                                    title:
+                                        code: '[model][title]'
+                                        ignore_missing: true
+                                        transformers:
+                                            trim: ~
+                                    personalName:
+                                        code: '[model][personal_name]'
+                                        ignore_missing: true
+                                        transformers:
+                                            trim: ~
+                                    alternateNames:
+                                        code: '[model][alternate_names]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    period:
+                                        code: '[model][date]'
+                                        ignore_missing: true
+                                    birthYear:
+                                        code: '[model][birth_date]'
+                                        ignore_missing: true
+                                    deathYear:
+                                        code: '[model][death_date]'
+                                        ignore_missing: true
+                                    biography:
+                                        code: '[model][bio][value]'
+                                        ignore_missing: true
+                                    links:
+                                        code: '[model][links]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                            array_map:
+                                                transformers:
+                                                    mapping:
+                                                        mapping:
+                                                            title:
+                                                                code: '[title]'
+                                                            url:
+                                                                code: '[url]'
+                                    website:
+                                        code: '[model][website]'
+                                        ignore_missing: true
+                                    location:
+                                        code: '[model][location]'
+                                        ignore_missing: true
+                                    wikipedia:
+                                        code: '[model][wikipedia]'
+                                        ignore_missing: true
+                                    fullerName:
+                                        code: '[model][fuller_name]'
+                                        ignore_missing: true
+                                        transformers:
+                                            trim: ~
+                                    viafCode:
+                                        code: '[model][remote_ids][viaf]'
+                                        ignore_missing: true
+                                    wikidataCode:
+                                        code: '[model][remote_ids][wikidata]'
+                                        ignore_missing: true
+                                    isniCode:
+                                        code: '[model][remote_ids][isni]'
+                                        ignore_missing: true
+                                    createdAt:
+                                        code: ['[model][created][value]', '[model][last_modified][value]']
+                                        ignore_missing: true
+                                        transformers:
+                                            array_first: ~
+                                            date_parser:
+                                                format: 'Y-m-d\TH:i:s.u'
+                                            date_format:
+                                                format: 'Y-m-d\TH:i:sP'
+                                    updatedAt:
+                                        code: '[model][last_modified][value]'
+                                        transformers:
+                                            date_parser:
+                                                format: 'Y-m-d\TH:i:s.u'
+                                            date_format:
+                                                format: 'Y-m-d\TH:i:sP'
+                    outputs: [denormalize]
+                    error_outputs: [debug]
+
+                edition_mapping:
+                    service: '@CleverAge\ProcessBundle\Task\TransformerTask'
+                    error_strategy: skip
+                    options:
+                        transformers:
+                            mapping:
+                                mapping:
+                                    family:
+                                        code: '[family]'
+                                    olCode:
+                                        code: '[olCode]'
+                                    title:
+                                        code: '[model][title]'
+                                        ignore_missing: true
+                                        transformers:
+                                            trim: ~
+                                    publishers:
+                                        code: '[model][publishers]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    numberOfPages:
+                                        code: '[model][number_of_pages]'
+                                        ignore_missing: true
+                                    isbn10:
+                                        code: '[model][isbn_10]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    isbn13:
+                                        code: '[model][isbn_13]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    isbn14:
+                                        code: '[model][isbn_14]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    lccn:
+                                        code: '[model][lccn]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    publicationDate:
+                                        code: '[model][publish_date]'
+                                        ignore_missing: true
+                                    authors:
+                                        code: '[model][authors]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                            array_map:
+                                                transformers:
+                                                    mapping:
+                                                        mapping:
+                                                            family:
+                                                                constant: Author
+                                                            olCode:
+                                                                code: '[key]'
+                                                                transformers:
+                                                                    explode:
+                                                                        delimiter: '/'
+                                                                    property_accessor:
+                                                                        property_path: '[2]'
+                                    subjects:
+                                        code: '[model][subjects]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    works:
+                                        code: '[model][works]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                            array_map:
+                                                transformers:
+                                                    mapping:
+                                                        mapping:
+                                                            family:
+                                                                constant: Work
+                                                            olCode:
+                                                                code: '[key]'
+                                                                transformers:
+                                                                    explode:
+                                                                        delimiter: '/'
+                                                                    property_accessor:
+                                                                        property_path: '[2]'
+                                    librarythingCode:
+                                        code: '[identifiers][librarything][0]'
+                                        ignore_missing: true
+                                    goodreadsCode:
+                                        code: '[identifiers][goodreads][0]'
+                                        ignore_missing: true
+                                    physicalFormat:
+                                        code: '[model][physical_format]'
+                                        ignore_missing: true
+                                    weight:
+                                        code: '[model][weight]'
+                                        ignore_missing: true
+                                    sourceRecords:
+                                        code: '[model][source_records]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    oclcNumbers:
+                                        code: ['[model][oclc_numbers]', '[model][oclc_number]']
+                                        ignore_missing: true
+                                        transformers:
+                                            array_first: ~
+                                            default:
+                                                value: []
+                                    contributions:
+                                        code: '[model][contributions]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    subtitle:
+                                        code: '[model][subtitle]'
+                                        ignore_missing: true
+                                    languages:
+                                        code: '[model][languages]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                            array_map:
+                                                transformers:
+                                                    mapping:
+                                                        mapping:
+                                                            family:
+                                                                constant: Language
+                                                            key:
+                                                                code: '[key]'
+                                                                transformers:
+                                                                    explode:
+                                                                        delimiter: '/'
+                                                                    property_accessor:
+                                                                        property_path: '[2]'
+                                    publicationCountry:
+                                        code: '[model][publish_country]'
+                                        ignore_missing: true
+                                    publicationPlaces:
+                                        code: '[model][publish_places]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    genres:
+                                        code: '[model][genres]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    ocaid:
+                                        code: '[model][ocaid]'
+                                        ignore_missing: true
+                                    series:
+                                        code: '[model][series]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    editionName:
+                                        code: '[model][edition_name]'
+                                        ignore_missing: true
+                                    lcClassifications:
+                                        code: '[model][lc_classifications]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    byStatement:
+                                        code: '[model][by_statement]'
+                                        ignore_missing: true
+                                    pagination:
+                                        code: '[model][pagination]'
+                                        ignore_missing: true
+                                    deweyDecimalClass:
+                                        code: '[model][dewey_decimal_class]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                    contributors:
+                                        code: '[model][contributors]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                            array_map:
+                                                transformers:
+                                                    mapping:
+                                                        mapping:
+                                                            name:
+                                                                code: '[name]'
+                                                            role:
+                                                                code: '[role]'
+                                    tableOfContents:
+                                        code: '[model][table_of_contents]'
+                                        ignore_missing: true
+                                        transformers:
+                                            default:
+                                                value: []
+                                            array_map:
+                                                transformers:
+                                                    mapping:
+                                                        mapping:
+                                                            title:
+                                                                code: ['[title]', '[value]']
+                                                                ignore_missing: true
+                                                                transformers:
+                                                                    array_first: ~
+                                                            level:
+                                                                code: '[level]'
+                                                                ignore_missing: true
+                                                            pageNumber:
+                                                                code: '[pagenum]'
+                                                                ignore_missing: true
+                                                            label:
+                                                                code: '[label]'
+                                                                ignore_missing: true
+#                                    uri_descriptions: ~
+#                                    uris: ~
+#                                    url: ~
+#                                    other_titles: ~
+#                                    subject_time: ~
+#                                    subject_place: ~
+#                                    description: ~
+#                                    physical_dimensions: ~
+#                                    title_prefix: ~
+#                                    classifications: ~
+#                                    isbn_invalid: ~
+#                                    copyright_date: ~
+#                                    work_title: ~
+#                                    first_sentence: ~
+#                                    copyright_date: ~
+#                                    work_titles: ~
+#                                    coverimage: ~
+#                                    covers: ~
+#                                    translated_from: ~
+#                                    translation_of: ~
+#                                    location: ~
+#                                    scan_records: ~
+#                                    scan_on_demand: ~
+#                                    full_title: ~
+
+                                    createdAt:
+                                        code: ['[model][created][value]', '[model][last_modified][value]']
+                                        ignore_missing: true
+                                        transformers:
+                                            array_first: ~
+                                            date_parser:
+                                                format: 'Y-m-d\TH:i:s.u'
+                                            date_format:
+                                                format: 'Y-m-d\TH:i:sP'
+                                    updatedAt:
+                                        code: '[model][last_modified][value]'
+                                        transformers:
+                                            date_parser:
+                                                format: 'Y-m-d\TH:i:s.u'
+                                            date_format:
+                                                format: 'Y-m-d\TH:i:sP'
+                    outputs: [denormalize]
+                    error_outputs: [debug]
+
+                denormalize:
+                    service: '@CleverAge\EnqueueProcessBundle\Task\PushEventTask'
+                    options:
+                        topic: import.denormalize_eav
+
+                stats:
+                    service: '@CleverAge\ProcessBundle\Task\Reporting\AdvancedStatCounterTask'
+                    options:
+                        show_every: 1000
+
+                debug:
+                    service: '@CleverAge\ProcessBundle\Task\Debug\DebugTask'

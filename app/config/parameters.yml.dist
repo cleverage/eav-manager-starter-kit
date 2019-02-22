@@ -18,3 +18,12 @@ parameters:
 
     # Needed when app is behind a reverse proxy
     trusted_proxies: ~
+
+    rabbitmq.host: 127.0.0.1
+    rabbitmq.port: 5672
+    rabbitmq.user: root
+    rabbitmq.pass: root
+
+    elastic_search.host: elasticsearch
+    elastic_search.port: 9200
+    elastic_search.password: elasticsearch_password

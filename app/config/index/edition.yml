@@ -1,0 +1,32 @@
+fos_elastica:
+    indexes:
+        edition:
+            types:
+                datagrid:
+                    properties:
+                        olCode:
+                            type: keyword
+                        title:
+                            type: keyword
+                        title_search:
+                            property_path: title
+                            type: text
+                        publishers:
+                            type: keyword
+                        publicationDate:
+                            type: keyword
+                        numberOfPages:
+                            type: integer
+                        isbn10:
+                            type: keyword
+                        isbn13:
+                            type: keyword
+                        isbn14:
+                            type: keyword
+                        subjects:
+                            type: keyword
+                    persistence:
+                        driver: orm
+                        model: App\Entity\Edition
+                        elastica_to_model_transformer:
+                            ignore_missing: true

@@ -1,0 +1,17 @@
+fos_elastica:
+    indexes:
+        author:
+            types:
+                datagrid:
+                    properties:
+                        olCode:
+                            type: keyword
+                        name:
+                            type: keyword
+                        birthYear:
+                            type: integer
+                    persistence:
+                        driver: orm
+                        model: App\Entity\Author
+                        elastica_to_model_transformer:
+                            ignore_missing: true

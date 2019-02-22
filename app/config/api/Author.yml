@@ -1,0 +1,3 @@
+resources:
+    App\Entity\Author:
+#        iri: 'http://schema.org/author'

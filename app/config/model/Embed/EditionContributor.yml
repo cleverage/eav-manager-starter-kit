@@ -1,0 +1,8 @@
+sidus_eav_model:
+    families:
+        EditionContributor:
+            attributeAsLabel: name
+            attributes:
+                name:
+                    required: true
+                role: ~

@@ -1,0 +1,9 @@
+resources:
+    # EAV Model
+    Sidus\EAVModelBundle\Model\Family:
+        collectionOperations:
+            get:
+                method: 'GET'
+        itemOperations:
+            get:
+                method: 'GET'

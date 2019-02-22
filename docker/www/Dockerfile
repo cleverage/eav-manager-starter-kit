@@ -18,7 +18,8 @@ RUN apt-get update && apt-get install -y \
     php7.2-gd \
     php7.2-mysql \
     php7.2-curl \
-    php-xdebug
+    php-xdebug \
+    supervisor
 
 # Fix fastcgi params in nginx
 COPY nginx/snippets/php-fpm.conf /etc/nginx/snippets/php-fpm.conf

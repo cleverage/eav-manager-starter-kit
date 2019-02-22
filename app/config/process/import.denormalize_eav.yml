@@ -1,0 +1,22 @@
+clever_age_process:
+    configurations:
+        import.denormalize_eav:
+            entry_point: denormalize
+            tasks:
+                denormalize:
+                    service: '@CleverAge\ProcessBundle\Task\Serialization\DenormalizerTask'
+                    error_strategy: skip
+                    options:
+                        class: Sidus\EAVModelBundle\Entity\DataInterface
+                    outputs: [save]
+                    error_outputs: [debug]
+
+                save:
+                    service: '@CleverAge\ProcessBundle\Task\Doctrine\DoctrineWriterTask'
+                    outputs: [detach]
+
+                detach:
+                    service: '@CleverAge\ProcessBundle\Task\Doctrine\DoctrineDetacherTask'
+
+                debug:
+                    service: '@CleverAge\ProcessBundle\Task\Debug\DebugTask'

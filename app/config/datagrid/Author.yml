@@ -1,0 +1,29 @@
+sidus_data_grid:
+    configurations:
+        Author:
+            query_handler:
+                provider: sidus.elastica
+#                provider: sidus.eav
+                options:
+                    family: Author
+                    reference: fos_elastica.finder.author.datagrid
+                sortable:
+                    - olCode
+                    - name
+                    - birthYear
+                filters:
+                    olCode: ~
+                    name: ~
+                    birthYear: ~
+            columns:
+                olCode: ~
+                name:
+                    template: '%clickable.template%'
+                birthYear: ~
+                actions:
+                    template: '%datagrid.actions%'
+            actions:
+                create: '%create.button%'
+            reset_button:
+                attr:
+                    data-target-element: '#tg_center'
