@@ -1,0 +1,7 @@
+services:
+    api.filter.author.search:
+        parent: CleverAge\EAVManager\ApiPlatformBundle\EAV\Filter\SearchFilter
+        arguments:
+            - { olCode: ~ }
+        tags:
+            - { name: api_platform.filter, id: api.filter.author.search }

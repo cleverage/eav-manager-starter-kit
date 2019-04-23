@@ -39,6 +39,7 @@ class AppKernel extends Kernel
                 new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle(),
                 new Sensio\Bundle\DistributionBundle\SensioDistributionBundle(),
                 new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
+                new Sidus\DoctrineDebugBundle\SidusDoctrineDebugBundle(),
             ];
         }
 

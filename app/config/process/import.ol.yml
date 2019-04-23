@@ -60,7 +60,7 @@ clever_age_process:
                                         transformers:
                                             callback:
                                                 callback: json_decode
-                                                additional_parameters:
+                                                right_parameters:
                                                     - true
                     outputs: [filter_author, filter_edition]
                     errors: [debug]

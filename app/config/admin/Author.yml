@@ -1,7 +1,6 @@
 sidus_admin:
     configurations:
         Author:
-            # This option defines the
             controller_pattern:
                 - 'CleverAge\EAVManager\AdminBundle\Action\EAV\{{Action}}Action'
             template_pattern:
@@ -12,15 +11,23 @@ sidus_admin:
             form_type: '%eav_form.type%'
             actions:
                 list:
-                    path: /{familyCode}/list
+                    path: /list
+                    defaults:
+                        family: Author
                 create:
-                    path: /{familyCode}/create
+                    path: /create
+                    defaults:
+                        family: Author
                 read:
-                    path: /{familyCode}/read/{id}
+                    path: /read/{id}
                 edit:
-                    path: /{familyCode}/edit/{id}
+                    path: /edit/{id}
+                clone:
+                    path: /clone/{id}
+                    defaults:
+                        family: Author
                 delete:
-                    path: /{familyCode}/delete/{id}
+                    path: /delete/{id}
             options:
                 icon: database
                 families:
