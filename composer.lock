@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7a6d0ccc038390b67c6b7954655624d",
+    "content-hash": "4538420afb2be3e77e55a4860bcceadd",
     "packages": [
         {
             "name": "api-platform/api-platform",
@@ -317,22 +317,130 @@
             "time": "2018-08-15T13:25:32+00:00"
         },
         {
-            "name": "cleverage/eav-manager",
-            "version": "dev-v2.1-dev",
+            "name": "cleverage/doctrine-process-bundle",
+            "version": "dev-v3.0-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cleverage/eav-manager.git",
-                "reference": "11c3a09cc05d5182d205d3031bb45da2ef3fb493"
+                "url": "https://github.com/cleverage/doctrine-process-bundle.git",
+                "reference": "c9644bece0621324bc07d8c73ab46bbd5660f196"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/11c3a09cc05d5182d205d3031bb45da2ef3fb493",
-                "reference": "11c3a09cc05d5182d205d3031bb45da2ef3fb493",
+                "url": "https://api.github.com/repos/cleverage/doctrine-process-bundle/zipball/c9644bece0621324bc07d8c73ab46bbd5660f196",
+                "reference": "c9644bece0621324bc07d8c73ab46bbd5660f196",
+                "shasum": ""
+            },
+            "require": {
+                "cleverage/process-bundle": "3.*|dev-v3.0-dev",
+                "doctrine/doctrine-bundle": "~1.6",
+                "doctrine/orm": "~2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.4"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CleverAge\\DoctrineProcessBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Chalnot",
+                    "email": "vchalnot@clever-age.com",
+                    "homepage": "http://chalnot.fr",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Valentin Clavreul",
+                    "email": "vclavreul@clever-age.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Madeline Veyrenc",
+                    "email": "mveyrenc@clever-age.com",
+                    "homepage": "https://github.com/mveyrenc",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dedicated bundle for Doctrine dependencies for the Process Bundle",
+            "homepage": "https://github.com/cleverage/doctrine-process-bundle",
+            "keywords": [
+                "doctrine",
+                "etl",
+                "export",
+                "import",
+                "process",
+                "task",
+                "transformation"
+            ],
+            "time": "2019-04-24T16:29:33+00:00"
+        },
+        {
+            "name": "cleverage/eav-api-platform-bundle",
+            "version": "dev-v1.0-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleverage/eav-api-platform-bundle.git",
+                "reference": "9b59a4ee8e83a6fb4cae33ab6e88e9d56d30f2d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleverage/eav-api-platform-bundle/zipball/9b59a4ee8e83a6fb4cae33ab6e88e9d56d30f2d9",
+                "reference": "9b59a4ee8e83a6fb4cae33ab6e88e9d56d30f2d9",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/core": "2.*",
+                "sidus/base-bundle": "1.0.*",
+                "sidus/eav-model-bundle": "1.3.*|dev-v1.3-dev"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CleverAge\\EAVApiPlatformBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Chalnot",
+                    "email": "vchalnot@clever-age.com",
+                    "homepage": "http://chalnot.fr",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Dedicated bundle for Sidus/EAVModelBundle dependencies for ApiPlatform",
+            "homepage": "https://github.com/cleverage/eav-api-platform-bundle",
+            "keywords": [
+                "api",
+                "eav"
+            ],
+            "time": "2019-05-19T17:29:08+00:00"
+        },
+        {
+            "name": "cleverage/eav-manager",
+            "version": "dev-v2.2-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleverage/eav-manager.git",
+                "reference": "55c8c6e5863b52ec3cec748179de85e0c4e8d07f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/55c8c6e5863b52ec3cec748179de85e0c4e8d07f",
+                "reference": "55c8c6e5863b52ec3cec748179de85e0c4e8d07f",
                 "shasum": ""
             },
             "require": {
                 "cleverage/permission-bundle": "1.0.*",
-                "cleverage/process-bundle": "dev-v2.0-dev",
                 "friendsofsymfony/jsrouting-bundle": "~1.6",
                 "liip/imagine-bundle": "~1.7|~2.0",
                 "php": ">=7.1",
@@ -382,7 +490,56 @@
                 "manager",
                 "model"
             ],
-            "time": "2019-04-17T08:50:56+00:00"
+            "time": "2019-05-19T17:37:58+00:00"
+        },
+        {
+            "name": "cleverage/eav-process-bundle",
+            "version": "dev-v3.0-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleverage/eav-process-bundle.git",
+                "reference": "2b91b4f3127cf1f1d916be0d53bc4c8bb391043c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleverage/eav-process-bundle/zipball/2b91b4f3127cf1f1d916be0d53bc4c8bb391043c",
+                "reference": "2b91b4f3127cf1f1d916be0d53bc4c8bb391043c",
+                "shasum": ""
+            },
+            "require": {
+                "cleverage/process-bundle": "3.*|dev-v3.0-dev",
+                "sidus/eav-model-bundle": "1.3.*|dev-v1.3-dev"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CleverAge\\EAVProcessBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Chalnot",
+                    "email": "vchalnot@clever-age.com",
+                    "homepage": "http://chalnot.fr",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Dedicated bundle for Sidus/EAVBundle dependencies for the Process Bundle",
+            "homepage": "https://github.com/cleverage/eav-process-bundle",
+            "keywords": [
+                "eav",
+                "etl",
+                "export",
+                "import",
+                "process",
+                "task",
+                "transformation"
+            ],
+            "time": "2019-04-25T10:10:08+00:00"
         },
         {
             "name": "cleverage/enqueue-process-bundle",
@@ -390,16 +547,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/enqueue-process-bundle.git",
-                "reference": "d1168a4145242e1dbe56e66e92efe420bcde457d"
+                "reference": "b6fe126968a16305530648ae5ea70ade0a5f7511"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/enqueue-process-bundle/zipball/d1168a4145242e1dbe56e66e92efe420bcde457d",
-                "reference": "d1168a4145242e1dbe56e66e92efe420bcde457d",
+                "url": "https://api.github.com/repos/cleverage/enqueue-process-bundle/zipball/b6fe126968a16305530648ae5ea70ade0a5f7511",
+                "reference": "b6fe126968a16305530648ae5ea70ade0a5f7511",
                 "shasum": ""
             },
             "require": {
-                "cleverage/process-bundle": "2.0.*|dev-v2.0-dev",
+                "cleverage/process-bundle": "2.0.*|dev-v2.0-dev|3.0.*|dev-v3.0-dev",
                 "enqueue/enqueue-bundle": "0.8.*",
                 "php": ">=7.1",
                 "sidus/base-bundle": "1.0.*",
@@ -433,7 +590,7 @@
                 "queue",
                 "task"
             ],
-            "time": "2019-04-17T08:46:09+00:00"
+            "time": "2019-05-19T18:06:38+00:00"
         },
         {
             "name": "cleverage/permission-bundle",
@@ -482,32 +639,44 @@
         },
         {
             "name": "cleverage/process-bundle",
-            "version": "dev-v2.0-dev",
+            "version": "dev-v3.0-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/process-bundle.git",
-                "reference": "65ce2ba57d749c4d03a4785d793dafd149264dd9"
+                "reference": "fd74736900352032565a0b82b7313035c5f1bbd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/process-bundle/zipball/65ce2ba57d749c4d03a4785d793dafd149264dd9",
-                "reference": "65ce2ba57d749c4d03a4785d793dafd149264dd9",
+                "url": "https://api.github.com/repos/cleverage/process-bundle/zipball/fd74736900352032565a0b82b7313035c5f1bbd8",
+                "reference": "fd74736900352032565a0b82b7313035c5f1bbd8",
                 "shasum": ""
             },
             "require": {
-                "doctrine/doctrine-bundle": "~1.6",
-                "doctrine/orm": "~2.5",
                 "ext-json": "*",
                 "php": ">=7.1",
                 "sidus/base-bundle": "~1.0",
+                "symfony/console": "~3.0|~4.0",
                 "symfony/expression-language": "~3.0|~4.0",
+                "symfony/framework-bundle": "~3.0|~4.0",
                 "symfony/monolog-bundle": "~3.3",
-                "symfony/symfony": "~3.0|~4.0"
+                "symfony/options-resolver": "~3.0|~4.0",
+                "symfony/process": "~3.0|~4.0",
+                "symfony/property-access": "~3.0|~4.0",
+                "symfony/serializer": "~3.0|~4.0",
+                "symfony/validator": "~3.0|~4.0",
+                "symfony/yaml": "~3.0|~4.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~6.4"
             },
-            "type": "library",
+            "suggest": {
+                "cleverage/doctrine-process-bundle": "Dedicated bundle for Doctrine dependencies for the process bundle",
+                "cleverage/enqueue-process-bundle": "Manage asynchronous events within the process bundle",
+                "cleverage/flysystem-process-bundle": "Dedicated bundle for Flysystem dependencies for the process bundle",
+                "cleverage/rest-process-bundle": "Dedicated bundle for Rest dependencies for the process bundle",
+                "cleverage/soap-process-bundle": "Dedicated bundle for Soap dependencies for the process bundle"
+            },
+            "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
                     "CleverAge\\ProcessBundle\\": ""
@@ -546,7 +715,7 @@
                 "task",
                 "transformation"
             ],
-            "time": "2019-04-15T16:40:13+00:00"
+            "time": "2019-05-07T13:25:49+00:00"
         },
         {
             "name": "components/jquery",
@@ -1109,41 +1278,45 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "1.10.2",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "1f99e6645030542079c57d4680601a4a8778a1bd"
+                "reference": "09a38417339dc93849d051b914aae3947eb231a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/1f99e6645030542079c57d4680601a4a8778a1bd",
-                "reference": "1f99e6645030542079c57d4680601a4a8778a1bd",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/09a38417339dc93849d051b914aae3947eb231a7",
+                "reference": "09a38417339dc93849d051b914aae3947eb231a7",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.5.12",
                 "doctrine/doctrine-cache-bundle": "~1.2",
                 "jdorn/sql-formatter": "^1.2.16",
-                "php": "^5.5.9|^7.0",
-                "symfony/console": "~2.7|~3.0|~4.0",
-                "symfony/dependency-injection": "~2.7|~3.0|~4.0",
-                "symfony/doctrine-bridge": "~2.7|~3.0|~4.0",
-                "symfony/framework-bundle": "^2.7.22|~3.0|~4.0"
+                "php": "^7.1",
+                "symfony/config": "^3.4|^4.1",
+                "symfony/console": "^3.4|^4.1",
+                "symfony/dependency-injection": "^3.4|^4.1",
+                "symfony/doctrine-bridge": "^3.4|^4.1",
+                "symfony/framework-bundle": "^3.4|^4.1"
             },
             "conflict": {
-                "symfony/http-foundation": "<2.6"
+                "doctrine/orm": "<2.6",
+                "twig/twig": "<1.34|>=2.0,<2.4"
             },
             "require-dev": {
-                "doctrine/orm": "~2.4",
+                "doctrine/coding-standard": "^6.0",
+                "doctrine/orm": "^2.6",
                 "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^4.8.36|^5.7|^6.4",
-                "symfony/phpunit-bridge": "~2.7|~3.0|~4.0",
-                "symfony/property-info": "~2.8|~3.0|~4.0",
-                "symfony/validator": "~2.7|~3.0|~4.0",
-                "symfony/web-profiler-bundle": "~2.7|~3.0|~4.0",
-                "symfony/yaml": "~2.7|~3.0|~4.0",
-                "twig/twig": "~1.26|~2.0"
+                "phpunit/phpunit": "7.0",
+                "symfony/cache": "^3.4|^4.1",
+                "symfony/phpunit-bridge": "^4.2",
+                "symfony/property-info": "^3.4|^4.1",
+                "symfony/validator": "^3.4|^4.1",
+                "symfony/web-profiler-bundle": "^3.4|^4.1",
+                "symfony/yaml": "^3.4|^4.1",
+                "twig/twig": "^1.34|^2.4"
             },
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle.",
@@ -1152,7 +1325,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9.x-dev"
+                    "dev-master": "1.11.x-dev"
                 }
             },
             "autoload": {
@@ -1190,7 +1363,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2019-02-06T13:18:04+00:00"
+            "time": "2019-05-13T14:30:38+00:00"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -1753,16 +1926,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "v1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38"
+                "reference": "3da7c9d125591ca83944f477e65ed3d7b4617c48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
-                "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/3da7c9d125591ca83944f477e65ed3d7b4617c48",
+                "reference": "3da7c9d125591ca83944f477e65ed3d7b4617c48",
                 "shasum": ""
             },
             "require": {
@@ -1831,7 +2004,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2018-11-21T00:33:13+00:00"
+            "time": "2019-04-23T08:28:24+00:00"
         },
         {
             "name": "doctrine/reflection",
@@ -1910,16 +2083,16 @@
         },
         {
             "name": "elasticsearch/elasticsearch",
-            "version": "v6.1.0",
+            "version": "v6.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elastic/elasticsearch-php.git",
-                "reference": "b237a37b2cdf23a5a17fd3576cdea771394ad00d"
+                "reference": "8bde3f3b821361ec75e08a3746231d87230a2d3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/b237a37b2cdf23a5a17fd3576cdea771394ad00d",
-                "reference": "b237a37b2cdf23a5a17fd3576cdea771394ad00d",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/8bde3f3b821361ec75e08a3746231d87230a2d3a",
+                "reference": "8bde3f3b821361ec75e08a3746231d87230a2d3a",
                 "shasum": ""
             },
             "require": {
@@ -1929,12 +2102,12 @@
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "cpliakas/git-wrapper": "~1.0",
+                "cpliakas/git-wrapper": "^1.7 || ^2.1",
                 "doctrine/inflector": "^1.1",
-                "mockery/mockery": "0.9.4",
-                "phpstan/phpstan-shim": "0.8.3",
-                "phpunit/phpunit": "6.3.0",
-                "squizlabs/php_codesniffer": "3.0.2",
+                "mockery/mockery": "^1.2",
+                "phpstan/phpstan-shim": "^0.9 || ^0.11",
+                "phpunit/phpunit": "^5.7 || ^6.5",
+                "squizlabs/php_codesniffer": "^3.4",
                 "symfony/finder": "^2.8",
                 "symfony/yaml": "^2.8"
             },
@@ -1955,6 +2128,9 @@
             "authors": [
                 {
                     "name": "Zachary Tong"
+                },
+                {
+                    "name": "Enrico Zimuel"
                 }
             ],
             "description": "PHP Client for Elasticsearch",
@@ -1963,7 +2139,7 @@
                 "elasticsearch",
                 "search"
             ],
-            "time": "2019-01-08T18:53:46+00:00"
+            "time": "2019-04-29T15:14:22+00:00"
         },
         {
             "name": "emgag/flysystem-hash",
@@ -2491,42 +2667,43 @@
         },
         {
             "name": "friendsofsymfony/elastica-bundle",
-            "version": "v5.0.3",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSElasticaBundle.git",
-                "reference": "ebf96f984c7f0b6bdc830accd722c76b80943a23"
+                "reference": "3f2707d1d606a59527f74e88808b820a170d3f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSElasticaBundle/zipball/ebf96f984c7f0b6bdc830accd722c76b80943a23",
-                "reference": "ebf96f984c7f0b6bdc830accd722c76b80943a23",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSElasticaBundle/zipball/3f2707d1d606a59527f74e88808b820a170d3f42",
+                "reference": "3f2707d1d606a59527f74e88808b820a170d3f42",
                 "shasum": ""
             },
             "require": {
-                "pagerfanta/pagerfanta": "^1.0.5",
-                "php": "^5.6.0|^7.0",
+                "pagerfanta/pagerfanta": "^1.0.5|^2.0",
+                "php": "^7.1",
                 "psr/log": "^1.0",
-                "ruflin/elastica": "^5.2.1|^6.0",
-                "symfony/console": "^3.2|^4",
-                "symfony/dependency-injection": "^3.3|^4",
-                "symfony/framework-bundle": "^3.2|^4",
-                "symfony/property-access": "^3.2|^4"
+                "ruflin/elastica": "^5.3.5|^6.1.1",
+                "symfony/console": "^3.4|^4",
+                "symfony/dependency-injection": "^3.4|^4",
+                "symfony/framework-bundle": "^3.4|^4",
+                "symfony/property-access": "^3.4|^4"
             },
             "require-dev": {
                 "doctrine/doctrine-bundle": "^1.6",
                 "doctrine/orm": "^2.5",
-                "doctrine/phpcr-bundle": "^1.3",
+                "doctrine/phpcr-bundle": "^1.3|^2.0",
                 "doctrine/phpcr-odm": "^1.4",
                 "friendsofphp/php-cs-fixer": "^2.2",
                 "jackalope/jackalope-doctrine-dbal": "^1.2",
                 "jms/serializer-bundle": "^2.2",
                 "knplabs/knp-components": "^1.2",
                 "phpunit/phpunit": "^5.7.11|^6.5",
-                "symfony/expression-language": "^3.2|^4",
-                "symfony/serializer": "^3.2|^4",
-                "symfony/twig-bundle": "^3.2|^4",
-                "symfony/yaml": "^3.2|^4"
+                "symfony/expression-language": "^3.4|^4",
+                "symfony/serializer": "^3.4|^4",
+                "symfony/twig-bundle": "^3.4|^4",
+                "symfony/web-profiler-bundle": "^3.4|^4.0",
+                "symfony/yaml": "^3.4|^4"
             },
             "suggest": {
                 "enqueue/elastica-bundle": "The bundle adds extra features to FOSElasticaBundle bundle. Aimed to improve performance."
@@ -2534,7 +2711,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0.x-dev"
+                    "dev-master": "5.1.x-dev"
                 }
             },
             "autoload": {
@@ -2573,7 +2750,7 @@
                 "mongodb",
                 "search"
             ],
-            "time": "2018-02-07T12:32:48+00:00"
+            "time": "2019-05-03T10:13:56+00:00"
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
@@ -3862,37 +4039,43 @@
         },
         {
             "name": "oneup/uploader-bundle",
-            "version": "1.7.7",
+            "version": "1.9.2",
             "target-dir": "Oneup/UploaderBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1up-lab/OneupUploaderBundle.git",
-                "reference": "5b1b2076daab43b3e8aaed9e0b43cb537142c456"
+                "reference": "a32bc98019abfd51531d08cc79be19f849d87b84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1up-lab/OneupUploaderBundle/zipball/5b1b2076daab43b3e8aaed9e0b43cb537142c456",
-                "reference": "5b1b2076daab43b3e8aaed9e0b43cb537142c456",
+                "url": "https://api.github.com/repos/1up-lab/OneupUploaderBundle/zipball/a32bc98019abfd51531d08cc79be19f849d87b84",
+                "reference": "a32bc98019abfd51531d08cc79be19f849d87b84",
                 "shasum": ""
             },
             "require": {
+                "paragonie/random_compat": "^1.1|^2.0",
                 "php": ">=5.4",
-                "symfony/finder": "^2.4.0|~3.0",
-                "symfony/framework-bundle": "^2.4.0|~3.0"
+                "symfony/asset": "^2.4|^3.0",
+                "symfony/finder": "^2.4|^3.0",
+                "symfony/framework-bundle": "^2.4|^3.0",
+                "symfony/templating": "^2.4|^3.0",
+                "symfony/translation": "^2.4|^3.0"
             },
             "require-dev": {
                 "amazonwebservices/aws-sdk-for-php": "1.5.*",
                 "knplabs/gaufrette": "0.2.*@dev",
                 "oneup/flysystem-bundle": "^1.2",
-                "phpunit/phpunit": "~4.4",
-                "sensio/framework-extra-bundle": "2.*|~3.0",
-                "symfony/browser-kit": "2.*|~3.0",
-                "symfony/class-loader": "2.*|~3.0",
-                "symfony/security-bundle": "2.*|~3.0"
+                "phpunit/phpunit": "^4.4",
+                "sensio/framework-extra-bundle": "2.*|^3.0",
+                "symfony/browser-kit": "2.*|^3.0",
+                "symfony/class-loader": "2.*|^3.0",
+                "symfony/security-bundle": "2.*|^3.0",
+                "twistor/flysystem-stream-wrapper": "^1.0"
             },
             "suggest": {
                 "knplabs/knp-gaufrette-bundle": "0.1.*",
-                "oneup/flysystem-bundle": "^1.2"
+                "oneup/flysystem-bundle": "^1.2",
+                "twistor/flysystem-stream-wrapper": "^1.0 (Required when using Flysystem)"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -3927,24 +4110,24 @@
                 "plupload",
                 "upload"
             ],
-            "time": "2017-05-03T09:01:35+00:00"
+            "time": "2017-12-18T12:41:59+00:00"
         },
         {
             "name": "pagerfanta/pagerfanta",
-            "version": "v1.1.0",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/Pagerfanta.git",
-                "reference": "8400ab498e500018cff9a099ac22555e7949aa9a"
+                "reference": "45a85ad426316ae37f2d007022e5b4c95bc3aef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/8400ab498e500018cff9a099ac22555e7949aa9a",
-                "reference": "8400ab498e500018cff9a099ac22555e7949aa9a",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/45a85ad426316ae37f2d007022e5b4c95bc3aef4",
+                "reference": "45a85ad426316ae37f2d007022e5b4c95bc3aef4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^7.0"
             },
             "require-dev": {
                 "doctrine/orm": "~2.3",
@@ -3953,7 +4136,7 @@
                 "jmikola/geojson": "~1.0",
                 "mandango/mandango": "~1.0@dev",
                 "mandango/mondator": "~1.0@dev",
-                "phpunit/phpunit": "^4.8.35 | ^5.7",
+                "phpunit/phpunit": "^6.5",
                 "propel/propel": "~2.0@dev",
                 "propel/propel1": "~1.6",
                 "ruflin/elastica": "~1.3",
@@ -3975,8 +4158,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Pagerfanta\\": "src/"
+                "psr-4": {
+                    "Pagerfanta\\": "src/Pagerfanta/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3989,40 +4172,44 @@
                     "email": "pablodip@gmail.com"
                 }
             ],
-            "description": "Pagination for PHP 5.3",
+            "description": "Pagination for PHP",
             "keywords": [
                 "page",
                 "pagination",
                 "paginator",
                 "paging"
             ],
-            "time": "2018-05-01T10:49:10+00:00"
+            "time": "2019-04-02T08:50:39+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v9.99.99",
+            "version": "v2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
                 "shasum": ""
             },
             "require": {
-                "php": "^7"
+                "php": ">=5.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*",
-                "vimeo/psalm": "^1"
+                "phpunit/phpunit": "4.*|5.*"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -4041,7 +4228,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-02T15:55:56+00:00"
+            "time": "2019-01-03T20:59:08+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -5134,22 +5321,22 @@
         },
         {
             "name": "sidus/base-bundle",
-            "version": "v1.0.10",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusBaseBundle.git",
-                "reference": "f3273c92345f83fae6b375ef380451eb2371b9bd"
+                "reference": "d9133e38e147ccbafb710a9fcfa833b43c9663d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusBaseBundle/zipball/f3273c92345f83fae6b375ef380451eb2371b9bd",
-                "reference": "f3273c92345f83fae6b375ef380451eb2371b9bd",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusBaseBundle/zipball/d9133e38e147ccbafb710a9fcfa833b43c9663d5",
+                "reference": "d9133e38e147ccbafb710a9fcfa833b43c9663d5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
-            "type": "library",
+            "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
                     "Sidus\\BaseBundle\\": ""
@@ -5173,7 +5360,53 @@
                 "base",
                 "symfony"
             ],
-            "time": "2019-02-14T09:52:56+00:00"
+            "time": "2019-05-13T17:31:06+00:00"
+        },
+        {
+            "name": "sidus/base-serializer-bundle",
+            "version": "dev-v1.0-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VincentChalnot/SidusBaseSerializerBundle.git",
+                "reference": "7b204a6549ba5242f50e882a6eb351c97e734ee2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusBaseSerializerBundle/zipball/7b204a6549ba5242f50e882a6eb351c97e734ee2",
+                "reference": "7b204a6549ba5242f50e882a6eb351c97e734ee2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "sidus/base-bundle": "1.0.*",
+                "symfony/serializer": ">2.4,<5.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Sidus\\BaseSerializerBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Chalnot",
+                    "email": "vincent@sidus.fr",
+                    "homepage": "http://chalnot.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Additional serializer features for Symfony 3 & 4",
+            "homepage": "https://github.com/VincentChalnot/SidusBaseSerializerBundle",
+            "keywords": [
+                "base",
+                "serializer",
+                "symfony"
+            ],
+            "time": "2019-05-18T22:03:33+00:00"
         },
         {
             "name": "sidus/database-maintenance-bundle",
@@ -5371,12 +5604,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "fbf2557366bf4d4a80bd19fe9b9a78990acae719"
+                "reference": "a492e076d971be0590f72cc9e2b3947dbaa110fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/fbf2557366bf4d4a80bd19fe9b9a78990acae719",
-                "reference": "fbf2557366bf4d4a80bd19fe9b9a78990acae719",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/a492e076d971be0590f72cc9e2b3947dbaa110fe",
+                "reference": "a492e076d971be0590f72cc9e2b3947dbaa110fe",
                 "shasum": ""
             },
             "require": {
@@ -5415,7 +5648,7 @@
                 "eav",
                 "model"
             ],
-            "time": "2019-04-16T15:46:16+00:00"
+            "time": "2019-05-19T17:42:00+00:00"
         },
         {
             "name": "sidus/elastica-filter-bundle",
@@ -5471,12 +5704,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFileUploadBundle.git",
-                "reference": "a33e5babc1bb4a31b0832e6b1477391e95129bad"
+                "reference": "fe398fdea22565e481e952f6701c0d28e56be056"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusFileUploadBundle/zipball/a33e5babc1bb4a31b0832e6b1477391e95129bad",
-                "reference": "a33e5babc1bb4a31b0832e6b1477391e95129bad",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusFileUploadBundle/zipball/fe398fdea22565e481e952f6701c0d28e56be056",
+                "reference": "fe398fdea22565e481e952f6701c0d28e56be056",
                 "shasum": ""
             },
             "require": {
@@ -5512,7 +5745,7 @@
                 "upload",
                 "uploader"
             ],
-            "time": "2019-01-16T17:41:20+00:00"
+            "time": "2019-04-28T18:51:06+00:00"
         },
         {
             "name": "sidus/filter-bundle",
@@ -5919,16 +6152,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.26",
+            "version": "v3.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "1b89e7baec9891c323bbf1ec81af77d901fc60c9"
+                "reference": "a9bb1182151d81054800aa4fa2680d92a5928a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/1b89e7baec9891c323bbf1ec81af77d901fc60c9",
-                "reference": "1b89e7baec9891c323bbf1ec81af77d901fc60c9",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/a9bb1182151d81054800aa4fa2680d92a5928a6a",
+                "reference": "a9bb1182151d81054800aa4fa2680d92a5928a6a",
                 "shasum": ""
             },
             "require": {
@@ -5947,7 +6180,7 @@
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php56": "~1.0",
                 "symfony/polyfill-php70": "~1.6",
-                "twig/twig": "^1.35|^2.4.4"
+                "twig/twig": "^1.40|^2.9"
             },
             "conflict": {
                 "phpdocumentor/reflection-docblock": "<3.0||>=3.2.0,<3.2.2",
@@ -6070,7 +6303,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2019-04-17T15:57:27+00:00"
+            "time": "2019-05-01T13:04:01+00:00"
         },
         {
             "name": "thomaspark/bootswatch",
@@ -6231,16 +6464,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.8.1",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "91cc2594d3143761ce0399c1caffd0b500ffe5b9"
+                "reference": "5240e21982885b76629552d83b4ebb6d41ccde6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/91cc2594d3143761ce0399c1caffd0b500ffe5b9",
-                "reference": "91cc2594d3143761ce0399c1caffd0b500ffe5b9",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5240e21982885b76629552d83b4ebb6d41ccde6b",
+                "reference": "5240e21982885b76629552d83b4ebb6d41ccde6b",
                 "shasum": ""
             },
             "require": {
@@ -6256,7 +6489,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "2.10-dev"
                 }
             },
             "autoload": {
@@ -6294,7 +6527,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-04-16T17:14:24+00:00"
+            "time": "2019-05-14T12:03:52+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -7337,12 +7570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "7c567855e40e04d17e2b91f3fd1d8f6baf5bcca6"
+                "reference": "73398309c6b11d09275e47224f9ad301ba661f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/7c567855e40e04d17e2b91f3fd1d8f6baf5bcca6",
-                "reference": "7c567855e40e04d17e2b91f3fd1d8f6baf5bcca6",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/73398309c6b11d09275e47224f9ad301ba661f74",
+                "reference": "73398309c6b11d09275e47224f9ad301ba661f74",
                 "shasum": ""
             },
             "conflict": {
@@ -7356,14 +7589,14 @@
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "brightlocal/phpwhois": "<=4.2.5",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
-                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=3.4,<3.4.14|>=3.5,<3.5.17|>=3.6,<3.6.4",
+                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.5.18|>=3.6,<3.6.15|>=3.7,<3.7.7",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<=2.1.6",
                 "codeigniter/framework": "<=3.0.6",
-                "composer/composer": "<=1.0.0-alpha11",
+                "composer/composer": "<=1-alpha.11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/core": ">=2,<3.5.39",
-                "contao/core-bundle": ">=4,<4.4.37|>=4.5,<4.7.3",
+                "contao/core-bundle": ">=4,<4.4.39|>=4.5,<4.7.5",
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "contao/newsletter-bundle": ">=4,<4.1",
                 "david-garcia/phpwhois": "<=4.3.1",
@@ -7377,8 +7610,8 @@
                 "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1",
                 "dompdf/dompdf": ">=0.6,<0.6.2",
-                "drupal/core": ">=7,<7.65|>=8,<8.5.14|>=8.6,<8.6.14",
-                "drupal/drupal": ">=7,<7.65|>=8,<8.5.14|>=8.6,<8.6.14",
+                "drupal/core": ">=7,<7.67|>=8,<8.6.16|>=8.7,<8.7.1",
+                "drupal/drupal": ">=7,<7.67|>=8,<8.6.16|>=8.7,<8.7.1",
                 "erusev/parsedown": "<1.7.2",
                 "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
@@ -7392,7 +7625,7 @@
                 "fuel/core": "<1.8.1",
                 "gree/jose": "<=2.2",
                 "gregwar/rst": "<1.0.3",
-                "guzzlehttp/guzzle": ">=6,<6.2.1|>=4.0.0-rc2,<4.2.4|>=5,<5.3.1",
+                "guzzlehttp/guzzle": ">=4-rc.2,<4.2.4|>=5,<5.3.1|>=6,<6.2.1",
                 "illuminate/auth": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.10",
                 "illuminate/cookie": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "illuminate/database": ">=4,<4.0.99|>=4.1,<4.1.29",
@@ -7407,9 +7640,9 @@
                 "laravel/framework": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
                 "league/commonmark": "<0.18.3",
-                "magento/magento1ce": "<1.9.4",
-                "magento/magento1ee": ">=1.9,<1.14.4",
-                "magento/product-community-edition": ">=2,<2.2.7",
+                "magento/magento1ce": "<1.9.4.1",
+                "magento/magento1ee": ">=1.9,<1.14.4.1",
+                "magento/product-community-edition": ">=2,<2.2.8|>=2.3,<2.3.1",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
                 "onelogin/php-saml": "<2.10.4",
@@ -7427,7 +7660,7 @@
                 "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
                 "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
-                "propel/propel": ">=2.0.0-alpha1,<=2.0.0-alpha7",
+                "propel/propel": ">=2-alpha.1,<=2-alpha.7",
                 "propel/propel1": ">=1,<=1.7.1",
                 "pusher/pusher-php-server": "<2.2.1",
                 "robrichards/xmlseclibs": ">=1,<3.0.2",
@@ -7452,38 +7685,42 @@
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
                 "sylius/sylius": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
-                "symfony/dependency-injection": ">=2,<2.0.17",
+                "symfony/cache": ">=3.2,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
+                "symfony/dependency-injection": ">=2,<2.0.17|>=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
-                "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2",
-                "symfony/http-foundation": ">=2,<2.7.49|>=2.8,<2.8.44|>=3,<3.3.18|>=3.4,<3.4.14|>=4,<4.0.14|>=4.1,<4.1.3",
+                "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2|>=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
+                "symfony/http-foundation": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
                 "symfony/intl": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/phpunit-bridge": ">=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/polyfill": ">=1,<1.10",
                 "symfony/polyfill-php55": ">=1,<1.10",
+                "symfony/proxy-manager-bridge": ">=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.19|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
+                "symfony/security": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/security-bundle": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<2.8.37|>=3,<3.3.17|>=3.4,<3.4.7|>=4,<4.0.7",
                 "symfony/security-csrf": ">=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/security-guard": ">=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
-                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
+                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
+                "symfony/symfony": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "tecnickcom/tcpdf": "<6.2.22",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
+                "thelia/thelia": ">=2.1-beta.1,<2.1.3",
                 "theonedemon/phpwhois": "<=4.2.5",
                 "titon/framework": ">=0,<9.9.99",
                 "truckersmp/phpwhois": "<=4.3.1",
                 "twig/twig": "<1.38|>=2,<2.7",
-                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.32|>=8,<8.7.23|>=9,<9.5.4",
-                "typo3/cms-core": ">=8,<8.7.23|>=9,<9.5.4",
+                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.32|>=8,<8.7.25|>=9,<9.5.6",
+                "typo3/cms-core": ">=8,<8.7.25|>=9,<9.5.6",
                 "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
                 "typo3/neos": ">=1.1,<1.1.3|>=1.2,<1.2.13|>=2,<2.0.4",
+                "typo3/phar-stream-wrapper": ">=1,<2.1.1|>=3,<3.1.1",
                 "ua-parser/uap-php": "<3.8",
                 "wallabag/tcpdf": "<6.2.22",
                 "willdurand/js-translation-bundle": "<2.1.1",
@@ -7534,7 +7771,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-04-20T06:58:11+00:00"
+            "time": "2019-05-17T16:29:20+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -8244,16 +8481,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "12593ad0bc54658d9bc74fa240a545b3873b4626"
+                "reference": "31f2e3c10bc9bd955ca1ae3e4da2bb489205714a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/12593ad0bc54658d9bc74fa240a545b3873b4626",
-                "reference": "12593ad0bc54658d9bc74fa240a545b3873b4626",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/31f2e3c10bc9bd955ca1ae3e4da2bb489205714a",
+                "reference": "31f2e3c10bc9bd955ca1ae3e4da2bb489205714a",
                 "shasum": ""
             },
             "require": {
@@ -8305,7 +8542,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2019-04-16T09:36:45+00:00"
+            "time": "2019-04-23T14:37:24+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -8352,16 +8589,20 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "sidus/elastica-filter-bundle": 20,
-        "cleverage/enqueue-process-bundle": 20,
+        "sidus/base-serializer-bundle": 20,
         "sidus/eav-model-bundle": 20,
         "sidus/file-upload-bundle": 20,
-        "cleverage/eav-manager": 20,
         "sidus/eav-bootstrap-bundle": 20,
         "sidus/filter-bundle": 20,
         "sidus/eav-filter-bundle": 20,
         "sidus/datagrid-bundle": 20,
         "sidus/admin-bundle": 20,
+        "cleverage/eav-manager": 20,
+        "cleverage/eav-api-platform-bundle": 20,
         "cleverage/process-bundle": 20,
+        "cleverage/doctrine-process-bundle": 20,
+        "cleverage/enqueue-process-bundle": 20,
+        "cleverage/eav-process-bundle": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

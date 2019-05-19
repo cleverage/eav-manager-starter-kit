@@ -18,6 +18,8 @@
 /vendor/
 /web/bundles/
 
+node_modules/
+
 .idea/
 /web/assets/
 /web/css/

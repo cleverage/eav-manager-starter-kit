@@ -34,6 +34,9 @@ services:
             SF_ELASTIC_SEARCH_PORT: 9200
             SF_ELASTIC_SEARCH_PASSWORD: elasticsearch
             SF_TRUSTED_PROXIES: '~'
+            PHP_IDE_CONFIG: 'serverName=cdm-cli'
+        extra_hosts:
+            - "host.docker.internal:172.17.0.1"
 
     mysql:
         image: mariadb
@@ -78,6 +81,15 @@ services:
             - 15672:15672
         volumes:
             - volume_rabbitmq:/var/lib/rabbitmq
+
+    react:
+        image: node:alpine
+        ports:
+            - 3000:3000
+        working_dir: /home/node/app
+        command: npm start
+        volumes:
+            - ../react:/home/node/app
 
 volumes:
     volume_rabbitmq:

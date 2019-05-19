@@ -1,0 +1,9 @@
+nelmio_cors:
+    paths:
+        '^/api':
+            origin_regex: true
+            allow_origin: ['*'] # You probably want to change this regex to match your real domain
+            allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
+            allow_headers: ['Content-Type', 'Authorization']
+            expose_headers: ['Link']
+            max_age: 3600
