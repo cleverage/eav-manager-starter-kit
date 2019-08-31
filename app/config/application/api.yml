@@ -1,0 +1,15 @@
+api_platform:
+    title: 'Open Library'
+    description: 'Clever Data Manager API'
+    version: '0.0.1'
+    mapping:
+        paths:
+            - '%kernel.root_dir%/config/api'
+    collection:
+        pagination:
+            enabled: true
+            items_per_page: 15
+            client_enabled: true
+            enabled_parameter_name: pagination
+            client_items_per_page: true
+            items_per_page_parameter_name: itemsPerPage

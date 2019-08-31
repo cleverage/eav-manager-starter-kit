@@ -1,0 +1,12 @@
+
+# EAV Manager
+CleverAge\EAVManager\UserBundle\Entity\User:
+    collectionOperations:
+        get:
+            method: 'GET'
+    itemOperations:
+        get:
+            method: 'GET'
+        profile:
+            method: 'GET'
+            path: /users/profile

@@ -1,0 +1,86 @@
+sidus_eav_model:
+    families:
+        Edition:
+            data_class: App\Entity\Edition
+            attributeAsLabel: title
+            attributeAsIdentifier: olCode
+            attributes:
+                olCode:
+                    type: string_identifier
+                title:
+                    required: true
+                publishers:
+                    multiple: true
+                numberOfPages:
+                    type: integer
+                isbn10:
+                    multiple: true
+                isbn13:
+                    multiple: true
+                isbn14:
+                    multiple: true
+                lccn:
+                    multiple: true
+                publicationDate: ~
+                authors:
+                    type: autocomplete_data_selector
+                    multiple: true
+                    options:
+                        allowed_families:
+                            - Author
+                        serializer:
+                            by_reference: false
+                subjects:
+                    multiple: true
+                works:
+                    type: autocomplete_data_selector
+                    multiple: true
+                    options:
+                        allowed_families:
+                            - Work
+                        serializer:
+                            by_reference: false
+                librarythingCode: ~
+                goodreadsCode: ~
+                physicalFormat: ~
+                weight: ~
+                sourceRecords:
+                    multiple: true
+                oclcNumbers:
+                    multiple: true
+                contributions:
+                    multiple: true
+                subtitle: ~
+                languages:
+                    type: autocomplete_data_selector
+                    multiple: true
+                    options:
+                        allowed_families:
+                            - Language
+                publicationCountry: ~
+                publicationPlaces:
+                    multiple: true
+                genres:
+                    multiple: true
+                ocaid: ~
+                series:
+                    multiple: true
+                editionName: ~
+                lcClassifications:
+                    multiple: true
+                byStatement: ~
+                pagination: ~
+                deweyDecimalClass:
+                    multiple: true
+                contributors:
+                    type: embed
+                    multiple: true
+                    options:
+                        allowed_families:
+                            - EditionContributor
+                tableOfContents:
+                    type: embed
+                    multiple: true
+                    options:
+                        allowed_families:
+                            - TableOfContentsEntry

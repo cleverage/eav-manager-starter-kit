@@ -1,0 +1,7 @@
+#services:
+#    # Command needs to be declared explicitly
+#    App\Command\:
+#        resource: '../../../src/App/Command/*'
+#        autowire: true
+#        autoconfigure: true
+#        public: false

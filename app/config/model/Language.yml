@@ -1,0 +1,10 @@
+sidus_eav_model:
+    families:
+        Language:
+            attributeAsLabel: label
+            attributeAsIdentifier: key
+            attributes:
+                key:
+                    type: string_identifier
+                label:
+                    required: true

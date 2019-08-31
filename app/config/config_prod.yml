@@ -13,20 +13,13 @@ monolog:
             type: fingers_crossed
             action_level: warning
             handler: file
-            channels: ['!cleverage_process', '!cleverage_process_task', '!cleverage_process_transformer', '!translation', '!event']
+            channels: ['!translation', '!event']
         file:
             type: rotating_file
             path: '%kernel.logs_dir%/%kernel.environment%.log'
             max_files: 10
             level: debug
             formatter: monolog.formatter.standard
-        process:
-            type: rotating_file
-            path: '%kernel.logs_dir%/process/%kernel.environment%.log'
-            max_files: 5
-            level: info
-            formatter: monolog.formatter.standard
-            channels: ['cleverage_process', 'cleverage_process_task', 'cleverage_process_transformer']
         console:
             type: console
             channels: ['!event', '!doctrine', '!cache', '!translation']

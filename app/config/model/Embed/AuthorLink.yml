@@ -1,0 +1,8 @@
+sidus_eav_model:
+    families:
+        AuthorLink:
+            attributeAsLabel: title
+            attributes:
+                title:
+                    required: true
+                url: ~

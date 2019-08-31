@@ -1,0 +1,6 @@
+#services:
+#    # Actions needs to be public
+#    App\Action\:
+#        resource: '../../../src/App/Action/*'
+#        autowire: true
+#        public: true

@@ -1,3 +1,8 @@
 eavmanager_admin:
     resource: '@CleverAgeEAVManagerAdminBundle/Resources/config/routing.yml'
     prefix: /
+
+api:
+    resource: '.'
+    type:     api_platform
+    prefix:   /api

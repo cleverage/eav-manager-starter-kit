@@ -1,3 +1,0 @@
-clever_age_process:
-    # This will become the new default configuration for the process bundle
-    default_error_strategy: stop

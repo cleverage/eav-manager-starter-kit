@@ -1,0 +1,9 @@
+#services:
+#    # Form types needs to be declared explicitly
+#    App\Form\Type\:
+#        resource: '../../../src/App/Form/Type/*'
+#        autowire: true
+#        autoconfigure: true
+#        public: false
+#        tags:
+#            - form.type

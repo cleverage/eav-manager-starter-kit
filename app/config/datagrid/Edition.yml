@@ -1,0 +1,36 @@
+sidus_data_grid:
+    configurations:
+        Edition:
+            query_handler:
+                provider: sidus.eav
+                options:
+                    family: Edition
+                sortable:
+                    - olCode
+                    - title
+                    - publicationDate
+                    - numberOfPages
+                filters:
+                    olCode: ~
+                    title_search: ~
+                    publishers: ~
+                    isbn10: ~
+                    isbn13: ~
+                    isbn14: ~
+                    subjects: ~
+            columns:
+                olCode: ~
+                title:
+                    template: '%clickable.template%'
+                publicationDate: ~
+                numberOfPages: ~
+                publishers: ~
+                authors: ~
+                subjects: ~
+                actions:
+                    template: '%datagrid.actions%'
+            actions:
+                create: '%create.button%'
+            reset_button:
+                attr:
+                    data-target-element: '#tg_center'
