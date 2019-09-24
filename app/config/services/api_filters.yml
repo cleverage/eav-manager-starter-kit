@@ -1,6 +1,6 @@
 services:
     api.filter.author.search:
-        parent: CleverAge\EAVManager\ApiPlatformBundle\EAV\Filter\SearchFilter
+        parent: CleverAge\EAVApiPlatformBundle\Filter\SearchFilter
         arguments:
             - { olCode: ~ }
         tags:
