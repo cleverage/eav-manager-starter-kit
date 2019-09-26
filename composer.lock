@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6c6e33e5472a301faa67bbe8ab9b575",
+    "content-hash": "ce8594a70b9ca4c9b76b39b990025343",
     "packages": [
         {
             "name": "api-platform/api-platform",
@@ -292,9 +292,9 @@
             "authors": [
                 {
                     "name": "Vincent Chalnot",
-                    "role": "Lead Developer",
                     "email": "vchalnot@clever-age.com",
-                    "homepage": "http://chalnot.fr"
+                    "homepage": "http://chalnot.fr",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "Dedicated bundle for Sidus/EAVModelBundle dependencies for ApiPlatform",
@@ -311,12 +311,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/eav-manager.git",
-                "reference": "d9bfba1f4b7a7fed636d0f87f715fb938533730b"
+                "reference": "fdca6622924530427ac98318ae9e13a62035ac13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/d9bfba1f4b7a7fed636d0f87f715fb938533730b",
-                "reference": "d9bfba1f4b7a7fed636d0f87f715fb938533730b",
+                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/fdca6622924530427ac98318ae9e13a62035ac13",
+                "reference": "fdca6622924530427ac98318ae9e13a62035ac13",
                 "shasum": ""
             },
             "require": {
@@ -325,6 +325,7 @@
                 "liip/imagine-bundle": "~1.7|~2.0",
                 "php": ">=7.1",
                 "sidus/admin-bundle": "dev-v2.0-dev",
+                "sidus/base-serializer-bundle": "1.0.*",
                 "sidus/eav-bootstrap-bundle": "dev-v2.1-dev",
                 "sidus/eav-filter-bundle": "dev-v2.1-dev",
                 "sidus/eav-model-bundle": "dev-v1.3-dev",
@@ -345,21 +346,21 @@
             "authors": [
                 {
                     "name": "Vincent Chalnot",
-                    "role": "Lead Developer",
                     "email": "vchalnot@clever-age.com",
-                    "homepage": "https://github.com/VincentChalnot"
+                    "homepage": "https://github.com/VincentChalnot",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Valentin Clavreul",
-                    "role": "Developer",
                     "email": "vclavreul@clever-age.com",
-                    "homepage": "https://github.com/shavounet"
+                    "homepage": "https://github.com/shavounet",
+                    "role": "Developer"
                 },
                 {
                     "name": "Madeline Veyrenc",
-                    "role": "Developer",
                     "email": "mveyrenc@clever-age.com",
-                    "homepage": "https://github.com/mveyrenc"
+                    "homepage": "https://github.com/mveyrenc",
+                    "role": "Developer"
                 }
             ],
             "description": "Blazing fast data modeling and enrichment",
@@ -370,7 +371,7 @@
                 "manager",
                 "model"
             ],
-            "time": "2019-08-29T07:50:56+00:00"
+            "time": "2019-09-18T15:09:13+00:00"
         },
         {
             "name": "cleverage/permission-bundle",
@@ -764,16 +765,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.10.0",
+            "version": "v2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "30e33f60f64deec87df728c02b107f82cdafad9d"
+                "reference": "b8ca1dcf6b0dc8a2af7a09baac8d0c48345df4ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/30e33f60f64deec87df728c02b107f82cdafad9d",
-                "reference": "30e33f60f64deec87df728c02b107f82cdafad9d",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/b8ca1dcf6b0dc8a2af7a09baac8d0c48345df4ff",
+                "reference": "b8ca1dcf6b0dc8a2af7a09baac8d0c48345df4ff",
                 "shasum": ""
             },
             "require": {
@@ -789,14 +790,16 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^1.0",
-                "phpunit/phpunit": "^6.3",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpunit/phpunit": "^7.0",
                 "squizlabs/php_codesniffer": "^3.0",
                 "symfony/phpunit-bridge": "^4.0.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10.x-dev"
+                    "dev-master": "2.11.x-dev"
                 }
             },
             "autoload": {
@@ -810,16 +813,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -841,7 +844,7 @@
                 "doctrine",
                 "php"
             ],
-            "time": "2018-11-21T01:24:55+00:00"
+            "time": "2019-09-10T10:10:14+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -1501,16 +1504,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.6.3",
+            "version": "v2.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "434820973cadf2da2d66e7184be370084cc32ca8"
+                "reference": "b52ef5a1002f99ab506a5a2d6dba5a2c236c5f43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/434820973cadf2da2d66e7184be370084cc32ca8",
-                "reference": "434820973cadf2da2d66e7184be370084cc32ca8",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/b52ef5a1002f99ab506a5a2d6dba5a2c236c5f43",
+                "reference": "b52ef5a1002f99ab506a5a2d6dba5a2c236c5f43",
                 "shasum": ""
             },
             "require": {
@@ -1525,9 +1528,8 @@
                 "symfony/console": "~3.0|~4.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^1.0",
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^3.2",
+                "doctrine/coding-standard": "^5.0",
+                "phpunit/phpunit": "^7.5",
                 "symfony/yaml": "~3.4|~4.0"
             },
             "suggest": {
@@ -1553,16 +1555,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -1579,7 +1581,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2018-11-20T23:46:46+00:00"
+            "time": "2019-09-20T14:30:26+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -2605,16 +2607,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.24.0",
+            "version": "1.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
+                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
                 "shasum": ""
             },
             "require": {
@@ -2679,7 +2681,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-11-05T09:00:11+00:00"
+            "time": "2019-09-06T13:49:17+00:00"
         },
         {
             "name": "mopa/bootstrap-bundle",
@@ -4092,7 +4094,7 @@
         },
         {
             "name": "sidus/base-serializer-bundle",
-            "version": "dev-v1.0-dev",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusBaseSerializerBundle.git",
@@ -4122,9 +4124,9 @@
             "authors": [
                 {
                     "name": "Vincent Chalnot",
-                    "role": "Developer",
                     "email": "vincent@sidus.fr",
-                    "homepage": "http://chalnot.fr"
+                    "homepage": "http://chalnot.fr",
+                    "role": "Developer"
                 }
             ],
             "description": "Additional serializer features for Symfony 3 & 4",
@@ -4234,12 +4236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVBootstrapBundle.git",
-                "reference": "364cbbab8bc4badbc36760486478f254d7c64dd9"
+                "reference": "faf89651fd05be72dbd6de8e08bf9283270bdcb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/364cbbab8bc4badbc36760486478f254d7c64dd9",
-                "reference": "364cbbab8bc4badbc36760486478f254d7c64dd9",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVBootstrapBundle/zipball/faf89651fd05be72dbd6de8e08bf9283270bdcb6",
+                "reference": "faf89651fd05be72dbd6de8e08bf9283270bdcb6",
                 "shasum": ""
             },
             "require": {
@@ -4266,9 +4268,9 @@
             "authors": [
                 {
                     "name": "Vincent Chalnot",
-                    "role": "Developer",
                     "email": "vincent@sidus.fr",
-                    "homepage": "http://chalnot.fr"
+                    "homepage": "http://chalnot.fr",
+                    "role": "Developer"
                 }
             ],
             "description": "Bootstrap implementation and helpers for Sidus/EAVModelBundle",
@@ -4277,7 +4279,7 @@
                 "bootstrap",
                 "eav"
             ],
-            "time": "2019-07-09T12:48:17+00:00"
+            "time": "2019-09-10T15:15:50+00:00"
         },
         {
             "name": "sidus/eav-filter-bundle",
@@ -4332,12 +4334,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "4a7d6ec23c7412f99997cae9929bda67484aeb87"
+                "reference": "2096c34f289df7fa20eb2d06e6689b1dc35a27d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/4a7d6ec23c7412f99997cae9929bda67484aeb87",
-                "reference": "4a7d6ec23c7412f99997cae9929bda67484aeb87",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/2096c34f289df7fa20eb2d06e6689b1dc35a27d5",
+                "reference": "2096c34f289df7fa20eb2d06e6689b1dc35a27d5",
                 "shasum": ""
             },
             "require": {
@@ -4364,9 +4366,9 @@
             "authors": [
                 {
                     "name": "Vincent Chalnot",
-                    "role": "Developer",
                     "email": "vincent@sidus.fr",
-                    "homepage": "http://chalnot.fr"
+                    "homepage": "http://chalnot.fr",
+                    "role": "Developer"
                 }
             ],
             "description": "Symfony3 & Doctrine implementation of a Entity-Attribute-Value model, easily extendable",
@@ -4376,7 +4378,7 @@
                 "eav",
                 "model"
             ],
-            "time": "2019-08-20T09:55:37+00:00"
+            "time": "2019-09-23T14:59:00+00:00"
         },
         {
             "name": "sidus/file-upload-bundle",
@@ -4384,12 +4386,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFileUploadBundle.git",
-                "reference": "8443e416eeb8e3eebaa562aa28811bd990d8a13b"
+                "reference": "f593602d67b5aff3e6b7f703b6c09e7e87d8e3ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusFileUploadBundle/zipball/8443e416eeb8e3eebaa562aa28811bd990d8a13b",
-                "reference": "8443e416eeb8e3eebaa562aa28811bd990d8a13b",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusFileUploadBundle/zipball/f593602d67b5aff3e6b7f703b6c09e7e87d8e3ca",
+                "reference": "f593602d67b5aff3e6b7f703b6c09e7e87d8e3ca",
                 "shasum": ""
             },
             "require": {
@@ -4399,6 +4401,9 @@
                 "mopa/composer-bridge": "~1.3",
                 "oneup/flysystem-bundle": "~1.13",
                 "oneup/uploader-bundle": "~1.7"
+            },
+            "suggest": {
+                "sidus/base-serializer-bundle": "This is mandatory if you enable serializer support"
             },
             "type": "library",
             "autoload": {
@@ -4413,9 +4418,9 @@
             "authors": [
                 {
                     "name": "Vincent Chalnot",
-                    "role": "Developer",
                     "email": "vincent@sidus.fr",
-                    "homepage": "http://chalnot.fr"
+                    "homepage": "http://chalnot.fr",
+                    "role": "Developer"
                 }
             ],
             "description": "Allow to upload files directly in Doctrine entities, based on oneup/uploader-bundle and jQuery-file-upload",
@@ -4425,7 +4430,7 @@
                 "upload",
                 "uploader"
             ],
-            "time": "2019-06-09T07:53:43+00:00"
+            "time": "2019-09-19T13:08:54+00:00"
         },
         {
             "name": "sidus/filter-bundle",
@@ -5710,16 +5715,16 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb"
+                "reference": "936fa7ad4d53897ea3e3eb41b5b760828246a20b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c21db169075c6ec4b342149f446e7b7b724f95eb",
-                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/936fa7ad4d53897ea3e3eb41b5b760828246a20b",
+                "reference": "936fa7ad4d53897ea3e3eb41b5b760828246a20b",
                 "shasum": ""
             },
             "require": {
@@ -5727,10 +5732,10 @@
                 "zendframework/zend-eventmanager": "^2.6 || ^3.0"
             },
             "require-dev": {
-                "doctrine/annotations": "~1.0",
+                "doctrine/annotations": "^1.0",
                 "ext-phar": "*",
-                "phpunit/phpunit": "^6.2.3",
-                "zendframework/zend-coding-standard": "^1.0.0",
+                "phpunit/phpunit": "^7.5.15",
+                "zendframework/zend-coding-standard": "^1.0",
                 "zendframework/zend-stdlib": "^2.7 || ^3.0"
             },
             "suggest": {
@@ -5753,13 +5758,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "provides facilities to generate arbitrary code using an object oriented interface",
-            "homepage": "https://github.com/zendframework/zend-code",
+            "description": "Extensions to the PHP Reflection API, static code scanning, and code generation",
             "keywords": [
+                "ZendFramework",
                 "code",
-                "zf2"
+                "zf"
             ],
-            "time": "2018-08-13T20:36:59+00:00"
+            "time": "2019-08-31T14:14:34+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -6548,12 +6553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "ea693fa060702164985511acc3ceb5389c9ac761"
+                "reference": "99b60dd3718d19e6627b6dfc0e5a99dbce1b915d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ea693fa060702164985511acc3ceb5389c9ac761",
-                "reference": "ea693fa060702164985511acc3ceb5389c9ac761",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/99b60dd3718d19e6627b6dfc0e5a99dbce1b915d",
+                "reference": "99b60dd3718d19e6627b6dfc0e5a99dbce1b915d",
                 "shasum": ""
             },
             "conflict": {
@@ -6664,6 +6669,7 @@
                 "spoonity/tcpdf": "<6.2.22",
                 "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
                 "stormpath/sdk": ">=0,<9.9.99",
+                "studio-42/elfinder": "<2.1.48",
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
                 "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
@@ -6750,12 +6756,12 @@
             "authors": [
                 {
                     "name": "Marco Pivetta",
-                    "role": "maintainer",
-                    "email": "ocramius@gmail.com"
+                    "email": "ocramius@gmail.com",
+                    "role": "maintainer"
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-07-18T15:17:58+00:00"
+            "time": "2019-09-23T15:43:18+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -6970,16 +6976,16 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "06a9a5947f47b3029d76118eb5c22802e5869687"
+                "reference": "68609e1261d215ea5b21b7987539cbfbe156ec3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/06a9a5947f47b3029d76118eb5c22802e5869687",
-                "reference": "06a9a5947f47b3029d76118eb5c22802e5869687",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/68609e1261d215ea5b21b7987539cbfbe156ec3e",
+                "reference": "68609e1261d215ea5b21b7987539cbfbe156ec3e",
                 "shasum": ""
             },
             "require": {
@@ -7033,7 +7039,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2019-08-11T12:43:14+00:00"
+            "time": "2019-09-14T09:02:43+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -7572,7 +7578,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sidus/base-serializer-bundle": 20,
         "sidus/eav-model-bundle": 20,
         "sidus/file-upload-bundle": 20,
         "sidus/eav-bootstrap-bundle": 20,

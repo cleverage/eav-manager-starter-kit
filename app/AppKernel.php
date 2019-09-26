@@ -29,7 +29,6 @@ class AppKernel extends Kernel
             // API Related
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new ApiPlatform\Core\Bridge\Symfony\Bundle\ApiPlatformBundle(),
-            new Sidus\BaseSerializerBundle\SidusBaseSerializerBundle(),
             new CleverAge\EAVApiPlatformBundle\CleverAgeEAVApiPlatformBundle(),
         ];
 

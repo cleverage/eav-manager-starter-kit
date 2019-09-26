@@ -5,6 +5,7 @@ server {
     root /var/www/current/web;
 
     index app.php;
+    server_name eav-manager-starter-kit.localhost;
 
     location / {
         try_files $uri $uri/ /app.php$is_args$args;
