@@ -1,6 +1,5 @@
 resources:
     App\Entity\Author:
-#        iri: 'http://schema.org/author'
         attributes:
             filters:
                 - api.filter.author.search

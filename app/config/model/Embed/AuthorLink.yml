@@ -1,7 +1,11 @@
 sidus_eav_model:
     families:
         AuthorLink:
+            data_class: App\Entity\AuthorLink
             attributeAsLabel: title
+            options:
+                serializer:
+                    minimal: true
             attributes:
                 title:
                     required: true

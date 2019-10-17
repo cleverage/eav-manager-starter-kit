@@ -27,6 +27,7 @@ services:
             SF_SECRET: ${SF_SECRET}
             SF_TRUSTED_PROXIES: '~'
             PHP_IDE_CONFIG: 'serverName=cdm-cli'
+            COMPOSER_MEMORY_LIMIT: -1
         extra_hosts:
             - "host.docker.internal:172.17.0.1"
 
