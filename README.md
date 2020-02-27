@@ -48,6 +48,10 @@ Stoping your containers
 $ make stop
 ````
 
+### Using the process-bundle
+
+Since the CDM v2.2, the process-bundle is now an independent package. It has been installed by default in this starter kit
+but feel free to remove it if you don't use it.
 
 ## Editing your model
 

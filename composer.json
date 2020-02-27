@@ -32,7 +32,8 @@
         "doctrine/doctrine-migrations-bundle": "^1.2",
         "sidus/database-maintenance-bundle": "1.0.*",
 
-        "cleverage/eav-manager": "2.1.*"
+        "cleverage/eav-manager": "3.0.*",
+        "cleverage/eav-process-bundle": "^1.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",

@@ -21,6 +21,11 @@ class AppKernel extends Kernel
         ];
 
         $eavBundles = CleverAge\EAVManager\EAVKernelBundleLoader::getBundles();
+        $processBundles = [
+            new CleverAge\ProcessBundle\CleverAgeProcessBundle(),
+            new CleverAge\DoctrineProcessBundle\CleverAgeDoctrineProcessBundle(),
+            new CleverAge\EAVProcessBundle\CleverAgeEAVProcessBundle(),
+        ];
 
         $projectBundles = [
             // Add any additional project bundle here
@@ -36,7 +41,7 @@ class AppKernel extends Kernel
             ];
         }
 
-        return array_merge($symfonyBundles, $eavBundles, $projectBundles, $devBundles);
+        return array_merge($symfonyBundles, $eavBundles, $processBundles, $projectBundles, $devBundles);
     }
 
     /**
